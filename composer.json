@@ -8,6 +8,7 @@
     "require": {
         "php": "^8.2",
         "afatmustafa/blade-hugeicons": "^1.0",
+        "cknow/laravel-money": "^8.4",
         "filament/filament": "^4.0",
         "honeystone/laravel-seo": "^2.0",
         "laravel/framework": "^12.0",

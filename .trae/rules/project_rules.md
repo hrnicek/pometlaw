@@ -18,7 +18,7 @@
 * **Styl:** **STRIKTNÍ FLAT DESIGN** (Bez stínů, hloubky a elevace).
 * **Framework:** **Tailwind CSS** (konfigurovaný pro shadcn/ui CSS proměnné).
 * **Backend Stack:** Laravel / Livewire (preferovat Livewire pro asynchronní interakce).
-* **Zaoblení:** Konzistentně **`rounded-xl` nebo `rounded-2xl`** pro všechny hlavní kontejnery, panely a karty.
+* **Zaoblení:** Konzistentně **`rounded-none` ** pro všechny hlavní kontejnery, panely a karty.
 
 ---
 

@@ -17,8 +17,12 @@ class EventsTable
                 TextColumn::make('name')
                     ->label('Název')
                     ->searchable(),
-                TextColumn::make('event_date')
-                    ->label('Datum události')
+                TextColumn::make('datetime_from')
+                    ->label('Začátek')
+                    ->dateTime()
+                    ->sortable(),
+                TextColumn::make('datetime_to')
+                    ->label('Konec')
                     ->dateTime()
                     ->sortable(),
                 TextColumn::make('capacity')

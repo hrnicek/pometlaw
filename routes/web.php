@@ -2,12 +2,11 @@
 
 use App\Http\Controllers\EventCategoriesController;
 use App\Http\Controllers\EventsController;
+use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LecturersController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('home');
-})->name('home');
+Route::get('/', [HomeController::class, 'index'])->name('home');
 
 // Public Events routes
 Route::get('events', [EventsController::class, 'index'])->name('events.index');

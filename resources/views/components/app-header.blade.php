@@ -14,9 +14,8 @@
       <div class="shrink-0">
         <a href="/" class="flex items-center space-x-3">
           <div class="relative">
-            <img src="{{ asset('img/logo.svg') }}" alt="POMETLAW" class="h-8 lg:h-10 w-auto">
+            <img src="{{ asset('img/logo.svg') }}" alt="POMETLAW" class="h-8 lg:h-24 w-auto">
           </div>
-          <span class="text-xl lg:text-2xl font-bold text-delft-blue tracking-tight">POMETLAW</span>
         </a>
       </div>
 

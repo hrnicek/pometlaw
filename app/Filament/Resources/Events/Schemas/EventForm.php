@@ -21,13 +21,21 @@ class EventForm
                     ->label('Popis')
                     ->required()
                     ->columnSpanFull(),
-                DateTimePicker::make('event_date')
-                    ->label('Datum události')
+                DateTimePicker::make('datetime_from')
+                    ->label('Začátek události')
                     ->required()
                     ->after(now())
                     ->rules(['after:now'])
                     ->validationMessages([
-                        'after' => 'Datum události musí být v budoucnosti.',
+                        'after' => 'Začátek události musí být v budoucnosti.',
+                    ]),
+                DateTimePicker::make('datetime_to')
+                    ->label('Konec události')
+                    ->required()
+                    ->after('datetime_from')
+                    ->rules(['after:datetime_from'])
+                    ->validationMessages([
+                        'after' => 'Konec události musí být po začátku.',
                     ]),
                 TextInput::make('capacity')
                     ->label('Kapacita')

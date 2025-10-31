@@ -1,3 +1,5 @@
+@props(['upcomingEvents' => collect()])
+
 <!-- Courses Section -->
 <section class="py-20 lg:py-24 bg-white">
   <div class="max-container">
@@ -54,139 +56,67 @@
         </p>
       </div>
 
-      <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
-        <!-- Course 1 -->
-        <div class="bg-white rounded-xl border border-paynes-gray/20 p-8">
-          <div class="flex items-center justify-between mb-6">
-            <span class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold bg-delft-blue/10 text-delft-blue">
-              Veřejné zakázky
-            </span>
-          </div>
-          <div class="mb-6">
-            <div class="flex items-center gap-3 text-sm text-brand-text mb-3">
-              <x-hugeicons-calendar-03 class="w-5 h-5 text-paynes-gray" />
-              <span class="font-medium">15. prosince 2024</span>
+      @if ($upcomingEvents->count() > 0)
+        <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
+          @foreach ($upcomingEvents as $event)
+            <div class="bg-white rounded-xl border border-paynes-gray/20 p-8">
+              <div class="flex items-center justify-between mb-6">
+                <span
+                  class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold bg-delft-blue/10 text-delft-blue">
+                  {{ $event->eventCategory->name }}
+                </span>
+              </div>
+              <div class="mb-6">
+                <div class="flex items-center gap-3 text-sm text-brand-text mb-3">
+                  <x-hugeicons-calendar-03 class="w-5 h-5 text-paynes-gray" />
+                  <span class="font-medium">{{ $event->formatted_event_date }}</span>
+                </div>
+                <div class="flex items-center gap-3 text-sm text-brand-text">
+                  <x-hugeicons-clock-01 class="w-5 h-5 text-paynes-gray" />
+                  <span class="font-medium">{{ $event->event_date->format('H:i') }}</span>
+                </div>
+              </div>
+              <h4 class="text-2xl font-bold text-delft-blue mb-4 leading-tight">
+                {{ $event->name }}
+              </h4>
+              <p class="text-brand-text mb-8 leading-relaxed text-lg">
+                {{ Str::limit($event->description, 120) }}
+              </p>
+              <div class="space-y-4 mb-8">
+                @if ($event->lecturers->count() > 0)
+                  <div class="flex items-center gap-4">
+                    <x-hugeicons-user-circle class="w-6 h-6 text-paynes-gray" />
+                    <span
+                      class="text-brand-text font-medium">{{ $event->lecturers->pluck('full_name')->join(', ') }}</span>
+                  </div>
+                @endif
+                <div class="flex items-center gap-4">
+                  <x-hugeicons-location-01 class="w-6 h-6 text-paynes-gray" />
+                  <span class="text-brand-text font-medium">{{ $event->location }}</span>
+                </div>
+                <div class="flex items-center gap-4">
+                  <x-hugeicons-money-bag-02 class="w-6 h-6 text-paynes-gray" />
+                  <span class="text-xl font-bold text-delft-blue">{{ $event->formatted_price }}</span>
+                </div>
+              </div>
+              <x-button-primary href="{{ route('events.show', $event) }}" class="w-full" size="lg">
+                <span>Zobrazit detail</span>
+                <x-hugeicons-arrow-right-01 class="w-5 h-5" />
+              </x-button-primary>
             </div>
-            <div class="flex items-center gap-3 text-sm text-brand-text">
-              <x-hugeicons-clock-01 class="w-5 h-5 text-paynes-gray" />
-              <span class="font-medium">9:00 - 17:00</span>
-            </div>
-          </div>
-          <h4 class="text-2xl font-bold text-delft-blue mb-4 leading-tight">
-            Nový zákon o veřejných zakázkách 2024
-          </h4>
-          <p class="text-brand-text mb-8 leading-relaxed text-lg">
-            Komplexní přehled změn v legislativě veřejných zakázek s praktickými
-            příklady a případovými studiemi.
-          </p>
-          <div class="space-y-4 mb-8">
-            <div class="flex items-center gap-4">
-              <x-hugeicons-user-circle class="w-6 h-6 text-paynes-gray" />
-              <span class="text-brand-text font-medium">JUDr. Marie Nováková</span>
-            </div>
-            <div class="flex items-center gap-4">
-              <x-hugeicons-location-01 class="w-6 h-6 text-paynes-gray" />
-              <span class="text-brand-text font-medium">Praha, Hotel Hilton</span>
-            </div>
-            <div class="flex items-center gap-4">
-              <x-hugeicons-money-bag-02 class="w-6 h-6 text-paynes-gray" />
-              <span class="text-xl font-bold text-delft-blue">4 500 Kč</span>
-            </div>
-          </div>
-          <x-button-primary href="#prihlaseni" class="w-full" size="lg">
-            <span>Přihlásit se</span>
-            <x-hugeicons-arrow-right-01 class="w-5 h-5" />
-          </x-button-primary>
+          @endforeach
         </div>
-
-        <!-- Course 2 -->
-        <div class="bg-white rounded-xl border border-paynes-gray/20 p-8">
-          <div class="flex items-center justify-between mb-6">
-            <span class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold bg-paynes-gray/10 text-paynes-gray">
-              Správní právo
-            </span>
-          </div>
-          <div class="mb-6">
-            <div class="flex items-center gap-3 text-sm text-brand-text mb-3">
-              <x-hugeicons-calendar-03 class="w-5 h-5 text-paynes-gray" />
-              <span class="font-medium">22. prosince 2024</span>
-            </div>
-            <div class="flex items-center gap-3 text-sm text-brand-text">
-              <x-hugeicons-clock-01 class="w-5 h-5 text-paynes-gray" />
-              <span class="font-medium">9:00 - 16:00</span>
-            </div>
-          </div>
-          <h4 class="text-2xl font-bold text-delft-blue mb-4 leading-tight">
-            Správní řízení v praxi
+      @else
+        <div class="text-center py-20">
+          <x-hugeicons-calendar-03 class="w-16 h-16 text-paynes-gray mx-auto mb-6" />
+          <h4 class="text-2xl font-bold text-brand-text mb-4">
+            Žádné nadcházející kurzy
           </h4>
-          <p class="text-brand-text mb-8 leading-relaxed text-lg">
-            Praktický seminář zaměřený na efektivní vedení správních řízení
-            a řešení nejčastějších problémů.
+          <p class="text-paynes-gray max-w-md mx-auto leading-relaxed">
+            V současné době nejsou k dispozici žádné nadcházející kurzy. Sledujte naše stránky pro aktuální nabídku.
           </p>
-          <div class="space-y-4 mb-8">
-            <div class="flex items-center gap-4">
-              <x-hugeicons-user-circle class="w-6 h-6 text-paynes-gray" />
-              <span class="text-brand-text font-medium">JUDr. Pavel Svoboda</span>
-            </div>
-            <div class="flex items-center gap-4">
-              <x-hugeicons-location-01 class="w-6 h-6 text-paynes-gray" />
-              <span class="text-brand-text font-medium">Brno, Kongresové centrum</span>
-            </div>
-            <div class="flex items-center gap-4">
-              <x-hugeicons-money-bag-02 class="w-6 h-6 text-paynes-gray" />
-              <span class="text-xl font-bold text-delft-blue">3 800 Kč</span>
-            </div>
-          </div>
-          <x-button-primary href="#prihlaseni" class="w-full" size="lg">
-            <span>Přihlásit se</span>
-            <x-hugeicons-arrow-right-01 class="w-5 h-5" />
-          </x-button-primary>
         </div>
-
-        <!-- Course 3 -->
-        <div class="bg-white rounded-xl border border-paynes-gray/20 p-8">
-          <div class="flex items-center justify-between mb-6">
-            <span class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold bg-moonstone/10 text-moonstone">
-              Legislativa
-            </span>
-          </div>
-          <div class="mb-6">
-            <div class="flex items-center gap-3 text-sm text-brand-text mb-3">
-              <x-hugeicons-calendar-03 class="w-5 h-5 text-paynes-gray" />
-              <span class="font-medium">8. ledna 2025</span>
-            </div>
-            <div class="flex items-center gap-3 text-sm text-brand-text">
-              <x-hugeicons-clock-01 class="w-5 h-5 text-paynes-gray" />
-              <span class="font-medium">9:00 - 17:00</span>
-            </div>
-          </div>
-          <h4 class="text-2xl font-bold text-delft-blue mb-4 leading-tight">
-            Digitalizace veřejné správy
-          </h4>
-          <p class="text-brand-text mb-8 leading-relaxed text-lg">
-            Komplexní přehled digitálních nástrojů a procesů ve veřejné správě
-            s praktickými ukázkami.
-          </p>
-          <div class="space-y-4 mb-8">
-            <div class="flex items-center gap-4">
-              <x-hugeicons-user-circle class="w-6 h-6 text-paynes-gray" />
-              <span class="text-brand-text font-medium">Ing. Jana Kratochvílová</span>
-            </div>
-            <div class="flex items-center gap-4">
-              <x-hugeicons-location-01 class="w-6 h-6 text-paynes-gray" />
-              <span class="text-brand-text font-medium">Online webinář</span>
-            </div>
-            <div class="flex items-center gap-4">
-              <x-hugeicons-money-bag-02 class="w-6 h-6 text-paynes-gray" />
-              <span class="text-xl font-bold text-delft-blue">2 500 Kč</span>
-            </div>
-          </div>
-          <x-button-primary href="#prihlaseni" class="w-full" size="lg">
-            <span>Přihlásit se</span>
-            <x-hugeicons-arrow-right-01 class="w-5 h-5" />
-          </x-button-primary>
-        </div>
-      </div>
+      @endif
     </div>
 
     <!-- Specialization Areas -->
@@ -214,7 +144,8 @@
               od základů po pokročilé postupy.
             </p>
             <div class="text-brand-text">
-              <span class="font-semibold text-lg">12 kurzů</span> • <span class="text-moonstone font-medium">Všechny úrovně</span>
+              <span class="font-semibold text-lg">12 kurzů</span> • <span class="text-moonstone font-medium">Všechny
+                úrovně</span>
             </div>
           </div>
         </div>
@@ -231,7 +162,8 @@
               ve veřejné správě a soukromém sektoru.
             </p>
             <div class="text-brand-text">
-              <span class="font-semibold text-lg">8 kurzů</span> • <span class="text-moonstone font-medium">Začátečníci až pokročilí</span>
+              <span class="font-semibold text-lg">8 kurzů</span> • <span class="text-moonstone font-medium">Začátečníci
+                až pokročilí</span>
             </div>
           </div>
         </div>
@@ -248,7 +180,8 @@
               aplikace a aktuální judikaturu.
             </p>
             <div class="text-brand-text">
-              <span class="font-semibold text-lg">15 kurzů</span> • <span class="text-moonstone font-medium">Pro pokročilé</span>
+              <span class="font-semibold text-lg">15 kurzů</span> • <span class="text-moonstone font-medium">Pro
+                pokročilé</span>
             </div>
           </div>
         </div>

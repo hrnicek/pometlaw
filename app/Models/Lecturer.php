@@ -20,13 +20,16 @@ class Lecturer extends Model
         'photo',
     ];
 
-    protected $casts = [
-        'first_name' => 'string',
-        'last_name' => 'string',
-        'title' => 'string',
-        'biography' => 'string',
-        'photo' => 'string',
-    ];
+    protected function casts(): array
+    {
+        return [
+            'first_name' => 'string',
+            'last_name' => 'string',
+            'title' => 'string',
+            'biography' => 'string',
+            'photo' => 'string',
+        ];
+    }
 
     public static function rules(): array
     {

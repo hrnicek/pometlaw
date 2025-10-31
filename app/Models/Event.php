@@ -18,32 +18,22 @@ class Event extends Model
         'name',
         'description',
         'event_date',
+        'datetime_from',
+        'datetime_to',
         'capacity',
         'price',
         'location',
         'event_category_id',
     ];
 
-    protected $casts = [
-        'name' => 'string',
-        'description' => 'string',
-        'event_date' => 'datetime',
-        'capacity' => 'integer',
-        'price' => 'decimal:2',
-        'location' => 'string',
-        'event_category_id' => 'integer',
-    ];
-
-    public static function rules(): array
+    protected function casts(): array
     {
         return [
-            'name' => 'required|string|max:255',
-            'description' => 'required|string',
-            'event_date' => 'required|date|after:now',
-            'capacity' => 'required|integer|min:1',
-            'price' => 'required|numeric|min:0',
-            'location' => 'required|string|max:255',
-            'event_category_id' => 'required|exists:event_categories,id',
+            'event_date' => 'datetime',
+            'datetime_from' => 'datetime',
+            'datetime_to' => 'datetime',
+            'capacity' => 'integer',
+            'price' => 'decimal:2',
         ];
     }
 
@@ -74,11 +64,6 @@ class Event extends Model
                 ->orWhere('description', 'like', "%{$search}%")
                 ->orWhere('location', 'like', "%{$search}%");
         });
-    }
-
-    public function getFormattedPriceAttribute(): string
-    {
-        return number_format((int) $this->price / 100, 0, ',', ' ').' Kč';
     }
 
     public function getFormattedEventDateAttribute(): string

@@ -12,7 +12,6 @@
         "list-artisan-commands",
         "database-schema",
         "report-feedback",
-        "database-query",
         "get-config",
         "application-info",
         "search-docs",
