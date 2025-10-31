@@ -1,8 +1,15 @@
 {
   "mcpServers": {
-     "shadcn": {
+    "shadcn": {
       "command": "npx",
-      "args": ["shadcn@latest", "mcp"]
+      "args": [
+        "shadcn@latest",
+        "mcp"
+      ],
+      "alwaysAllow": [
+        "get_project_registries",
+        "list_items_in_registries"
+      ]
     },
     "laravel-boost": {
       "command": "php",

@@ -1,11 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap');
-@import 'tailwindcss';
 
-@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
-@source '../../storage/framework/views/*.php';
-@source '../**/*.blade.php';
-@source '../**/*.js';
 
+## Cíl
+Generovat čistý, profesionální, sémantický a výkonný Blade kód v souladu s přísnými pravidly POMETLAW, estetikou shadcn/ui  
+
+## O PROJEKTU: SPOLEČNOST POMETLAW
+
+Společnost **Pometlaw** (vyslovováno *pometlo*) „vymetá“ zastaralé a neefektivní postupy v oblasti získávání a uveřejňování veřejných zakázek.  
+Cílem je odstranit zbytečné bariéry a modernizovat procesy tam, kde to zákon umožňuje — bez byrokracie a rigidních zvyklostí.
+
+## tailwind brand colors
 @theme {
     /* Typography */
     --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
