@@ -26,7 +26,7 @@
                 <!-- Hlavní obsah -->
                 <div class="lg:col-span-2 space-y-8">
                     <!-- Kategorie -->
-                    <div class="inline-flex items-center px-4 py-2 bg-delft-blue/10 text-delft-blue text-sm font-medium rounded-xl">
+                    <div class="inline-flex items-center px-4 py-2 bg-delft-blue/10 text-delft-blue text-sm font-medium">
                         {{ $event->eventCategory->name }}
                     </div>
 
@@ -38,7 +38,7 @@
                     </div>
 
                     <!-- Základní informace -->
-                    <div class="bg-gray-50 rounded-xl p-8 space-y-6">
+                    <div class="bg-gray-50 p-8 space-y-6">
                         <h2 class="text-2xl font-bold text-brand-text mb-6">
                             Základní informace
                         </h2>
@@ -112,16 +112,16 @@
                             
                             <div class="space-y-6">
                                 @foreach($event->lecturers as $lecturer)
-                                    <div class="bg-gray-50 rounded-xl p-8">
+                                    <div class="bg-gray-50 p-8">
                                         <div class="flex items-start space-x-6">
                                             @if($lecturer->photo)
-                                                <img 
-                                                    src="{{ asset('storage/' . $lecturer->photo) }}" 
-                                                    alt="{{ $lecturer->full_name }}"
-                                                    class="w-20 h-20 rounded-xl object-cover flex-shrink-0"
-                                                >
+                                                <img
+                                                     src="{{ asset('storage/' . $lecturer->photo) }}"
+                                                     alt="{{ $lecturer->full_name }}"
+                                                     class="w-20 h-20 object-cover flex-shrink-0"
+                                                 >
                                             @else
-                                                <div class="w-20 h-20 bg-delft-blue/10 rounded-xl flex items-center justify-center flex-shrink-0">
+                                                <div class="w-20 h-20 bg-delft-blue/10 flex items-center justify-center flex-shrink-0">
                                                     <x-hugeicons-user class="w-10 h-10 text-delft-blue"/>
                                                 </div>
                                             @endif
@@ -147,7 +147,7 @@
                 <!-- Sidebar s registrací -->
                 <div class="lg:col-span-1">
                     <div class="sticky top-8">
-                        <div class="bg-white border border-paynes-gray rounded-xl p-8 space-y-6">
+                        <div class="bg-white border border-paynes-gray p-8 space-y-6">
                             <div class="text-center">
                                 <div class="text-3xl font-bold text-delft-blue mb-2">
                                     {{ $event->formatted_price }}
@@ -172,7 +172,7 @@
                                             name="jmeno" 
                                             required
                                             value="{{ old('jmeno') }}"
-                                            class="w-full px-4 py-3 border border-paynes-gray rounded-xl focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue @error('jmeno') border-red-500 @enderror"
+                                            class="w-full px-4 py-3 border border-paynes-gray focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue @error('jmeno') border-red-500 @enderror"
                                         >
                                         @error('jmeno')
                                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -189,7 +189,7 @@
                                             name="prijmeni" 
                                             required
                                             value="{{ old('prijmeni') }}"
-                                            class="w-full px-4 py-3 border border-paynes-gray rounded-xl focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue @error('prijmeni') border-red-500 @enderror"
+                                            class="w-full px-4 py-3 border border-paynes-gray focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue @error('prijmeni') border-red-500 @enderror"
                                         >
                                         @error('prijmeni')
                                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -206,7 +206,7 @@
                                             name="email" 
                                             required
                                             value="{{ old('email') }}"
-                                            class="w-full px-4 py-3 border border-paynes-gray rounded-xl focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue @error('email') border-red-500 @enderror"
+                                            class="w-full px-4 py-3 border border-paynes-gray focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue @error('email') border-red-500 @enderror"
                                         >
                                         @error('email')
                                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>
@@ -222,7 +222,7 @@
                                             id="telefon" 
                                             name="telefon"
                                             value="{{ old('telefon') }}"
-                                            class="w-full px-4 py-3 border border-paynes-gray rounded-xl focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue @error('telefon') border-red-500 @enderror"
+                                            class="w-full px-4 py-3 border border-paynes-gray focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue @error('telefon') border-red-500 @enderror"
                                         >
                                         @error('telefon')
                                             <p class="mt-1 text-sm text-red-600">{{ $message }}</p>

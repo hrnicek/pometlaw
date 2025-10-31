@@ -107,7 +107,7 @@
     <div class="space-y-6">
       
       <!-- Hero CTA -->
-      <div class="bg-gray-50 p-4 rounded-xl">
+      <div class="bg-gray-50 p-4">
         <h3 class="font-semibold mb-2">Hero sekce - hlavní CTA</h3>
         <div class="flex flex-col sm:flex-row gap-4">
           <x-button-primary size="xl" class="gap-2">
@@ -122,7 +122,7 @@
       </div>
 
       <!-- Card CTA -->
-      <div class="bg-gray-50 p-4 rounded-xl">
+      <div class="bg-gray-50 p-4">
         <h3 class="font-semibold mb-2">Karta kurzu - CTA</h3>
         <x-button-primary href="#prihlaseni" size="md" class="w-full">
           Přihlásit se na kurz
@@ -130,7 +130,7 @@
       </div>
 
       <!-- Header -->
-      <div class="bg-gray-50 p-4 rounded-xl">
+      <div class="bg-gray-50 p-4">
         <h3 class="font-semibold mb-2">Header - navigační CTA</h3>
         <x-button-primary href="#prihlaseni" size="sm">
           Přihlásit se na kurz
@@ -145,7 +145,7 @@
     <h2 class="text-2xl font-bold mb-4">Kód - příklady použití</h2>
     
     <div class="space-y-4 text-sm">
-      <div class="bg-gray-900 text-green-400 p-4 rounded-lg font-mono">
+      <div class="bg-gray-900 text-green-400 p-4 font-mono">
         <div class="text-gray-400">// Základní použití</div>
         &lt;x-button-primary&gt;Tlačítko&lt;/x-button-primary&gt;<br><br>
         

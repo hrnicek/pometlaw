@@ -9,9 +9,9 @@
     'href' => '#'
 ])
 
-<div class="bg-white border border-paynes-gray rounded-xl p-6 space-y-6">
+<div class="bg-white border border-paynes-gray p-6 space-y-6">
     <!-- Kategorie -->
-    <div class="inline-flex items-center px-3 py-1 bg-delft-blue/10 text-delft-blue text-sm font-medium rounded-xl">
+    <div class="inline-flex items-center px-3 py-1 bg-delft-blue/10 text-delft-blue text-sm font-medium">
         {{ $category }}
     </div>
     

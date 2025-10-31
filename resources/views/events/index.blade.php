@@ -19,7 +19,7 @@
     <!-- Filtrování a vyhledávání -->
     <section class="py-12 bg-gray-50">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <form method="GET" action="{{ route('events.index') }}" class="bg-white rounded-xl p-8 border border-paynes-gray">
+            <form method="GET" action="{{ route('events.index') }}" class="bg-white p-8 border border-paynes-gray">
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
                     <!-- Vyhledávání -->
                     <div>
@@ -34,7 +34,7 @@
                                 name="search" 
                                 value="{{ request('search') }}"
                                 placeholder="Název kurzu, popis..."
-                                class="w-full pl-10 pr-4 py-3 border border-paynes-gray rounded-xl focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue"
+                                class="w-full pl-10 pr-4 py-3 border border-paynes-gray focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue"
                             >
                         </div>
                     </div>
@@ -47,7 +47,7 @@
                         <select 
                             id="category" 
                             name="category"
-                            class="w-full px-4 py-3 border border-paynes-gray rounded-xl focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue"
+                            class="w-full px-4 py-3 border border-paynes-gray focus:ring-4 focus:ring-delft-blue/20 focus:border-delft-blue"
                         >
                             <option value="">Všechny kategorie</option>
                             @foreach($categories as $category)

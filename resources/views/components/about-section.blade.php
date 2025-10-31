@@ -7,7 +7,7 @@
             <h2 class="text-4xl lg:text-5xl font-bold text-delft-blue mb-6">
                 Společnost POMETLAW
             </h2>
-            <div class="w-24 h-1 bg-moonstone mx-auto mb-8 rounded-full"></div>
+            <div class="w-24 h-1 bg-moonstone mx-auto mb-8"></div>
             <p class="text-xl text-brand-text max-w-4xl mx-auto leading-relaxed">
                 Specializovaná vzdělávací a poradenská platforma zaměřená na oblast práva, 
                 veřejné správy a legislativy s více než 15letou praxí.
@@ -63,13 +63,13 @@
 
             <!-- Visual Content -->
             <div class="relative">
-                <div class="bg-delft-blue/5 rounded-xl p-10 lg:p-12 border border-paynes-gray/20">
+                <div class="bg-delft-blue/5 p-10 lg:p-12 border border-paynes-gray/20">
                     <!-- Decorative Elements - REMOVED -->
                     
                     <!-- Statistics -->
                     <div class="space-y-8">
                         <div class="text-center">
-                            <div class="w-20 h-20 bg-delft-blue/10 rounded-xl flex items-center justify-center mx-auto mb-6">
+                            <div class="w-20 h-20 bg-delft-blue/10 flex items-center justify-center mx-auto mb-6">
                                 <x-hugeicons-award-03 class="w-10 h-10 text-delft-blue"/>
                             </div>
                             <h4 class="text-xl font-semibold text-delft-blue mb-3">Důvěryhodnost a kvalita</h4>
@@ -89,7 +89,7 @@
                                 <div class="text-3xl font-bold text-delft-blue mb-2">98%</div>
                                 <div class="text-sm text-brand-text">Úspěšnost kurzů</div>
                             </div>
-                            <div class="text-center p-6 bg-white rounded-xl border border-paynes-gray/20">
+                            <div class="text-center p-6 bg-white border border-paynes-gray/20">
                                 <div class="text-3xl font-bold text-delft-blue mb-2">50+</div>
                                 <div class="text-sm text-brand-text">Odborných témat</div>
                             </div>
@@ -105,7 +105,7 @@
                 <h3 class="text-3xl lg:text-4xl font-bold text-delft-blue mb-6">
                     Naše hodnoty a přístup
                 </h3>
-                <div class="w-24 h-1 bg-moonstone mx-auto mb-8 rounded-full"></div>
+                <div class="w-24 h-1 bg-moonstone mx-auto mb-8"></div>
                 <p class="text-xl text-brand-text max-w-4xl mx-auto">
                     Věříme v praktické vzdělávání, které přináší okamžitou hodnotu a aplikovatelné znalosti.
                 </p>
@@ -114,7 +114,7 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                 <div class="bg-white rounded-xl p-8 border border-paynes-gray/20">
                     <div class="flex flex-col items-center text-center space-y-6">
-                        <div class="w-16 h-16 bg-delft-blue/10 rounded-xl flex items-center justify-center">
+                        <div class="w-16 h-16 bg-delft-blue/10 flex items-center justify-center">
                             <x-hugeicons-award-03 class="w-8 h-8 text-delft-blue"/>
                         </div>
                         <h4 class="text-xl font-semibold text-delft-blue">Odbornost</h4>
@@ -126,7 +126,7 @@
 
                 <div class="bg-white rounded-xl p-8 border border-paynes-gray/20">
                     <div class="flex flex-col items-center text-center space-y-6">
-                        <div class="w-16 h-16 bg-moonstone/10 rounded-xl flex items-center justify-center">
+                        <div class="w-16 h-16 bg-moonstone/10 flex items-center justify-center">
                             <x-hugeicons-target-03 class="w-8 h-8 text-moonstone"/>
                         </div>
                         <h4 class="text-xl font-semibold text-delft-blue">Praktičnost</h4>
@@ -138,7 +138,7 @@
 
                 <div class="bg-white rounded-xl p-8 border border-paynes-gray/20">
                     <div class="flex flex-col items-center text-center space-y-6">
-                        <div class="w-16 h-16 bg-paynes-gray/10 rounded-xl flex items-center justify-center">
+                        <div class="w-16 h-16 bg-paynes-gray/10 flex items-center justify-center">
                             <x-hugeicons-refresh class="w-8 h-8 text-paynes-gray"/>
                         </div>
                         <h4 class="text-xl font-semibold text-delft-blue">Aktuálnost</h4>
@@ -164,7 +164,7 @@
 
         <!-- CTA Section -->
         <div class="mt-20 text-center">
-            <div class="bg-delft-blue/5 rounded-xl p-12 lg:p-16 border border-paynes-gray/20">
+            <div class="bg-delft-blue/5 p-12 lg:p-16 border border-paynes-gray/20">
                 <h3 class="text-3xl lg:text-4xl font-bold text-delft-blue mb-6">
                     Připojte se k našim spokojených klientům
                 </h3>

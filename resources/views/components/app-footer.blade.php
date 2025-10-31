@@ -17,15 +17,15 @@
           <!-- Sociální sítě -->
           <div class="flex items-center gap-4">
             <a href="#"
-              class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+              class="w-10 h-10 bg-white/10 flex items-center justify-center">
               <x-hugeicons-star class="w-5 h-5" />
             </a>
             <a href="#"
-              class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+              class="w-10 h-10 bg-white/10 flex items-center justify-center">
               <x-hugeicons-star class="w-5 h-5" />
             </a>
             <a href="#"
-              class="w-10 h-10 bg-white/10 rounded-xl flex items-center justify-center">
+              class="w-10 h-10 bg-white/10 flex items-center justify-center">
               <x-hugeicons-star class="w-5 h-5" />
             </a>
           </div>
@@ -121,7 +121,7 @@
           <div class="space-y-4">
             <!-- Adresa -->
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 bg-brand-moonstone/20 rounded-xl flex items-center justify-center mt-1">
+              <div class="w-8 h-8 bg-brand-moonstone/20 flex items-center justify-center mt-1">
                 <x-hugeicons-location-01 class="w-4 h-4 text-brand-moonstone" />
               </div>
               <div>
@@ -136,7 +136,7 @@
 
             <!-- Email -->
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 bg-brand-moonstone/20 rounded-xl flex items-center justify-center mt-1">
+              <div class="w-8 h-8 bg-brand-moonstone/20 flex items-center justify-center mt-1">
                 <x-hugeicons-mail-01 class="w-4 h-4 text-brand-moonstone" />
               </div>
               <div>
@@ -150,7 +150,7 @@
 
             <!-- Telefon -->
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 bg-brand-moonstone/20 rounded-xl flex items-center justify-center mt-1">
+              <div class="w-8 h-8 bg-brand-moonstone/20 flex items-center justify-center mt-1">
                 <x-hugeicons-call class="w-4 h-4 text-brand-moonstone" />
               </div>
               <div>
@@ -163,7 +163,7 @@
 
             <!-- Úřední hodiny -->
             <div class="flex items-start gap-3">
-              <div class="w-8 h-8 bg-brand-moonstone/20 rounded-xl flex items-center justify-center mt-1">
+              <div class="w-8 h-8 bg-brand-moonstone/20 flex items-center justify-center mt-1">
                 <x-hugeicons-time-04 class="w-4 h-4 text-brand-moonstone" />
               </div>
               <div>
@@ -182,7 +182,7 @@
     <!-- Newsletter sekce -->
     <div class="border-t border-white/10">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div class="bg-white/5 backdrop-blur-sm rounded-2xl p-8 text-center">
+        <div class="bg-white/5 backdrop-blur-sm p-8 text-center">
           <div class="max-w-2xl mx-auto">
             <div class="flex items-center justify-center gap-3 mb-4">
               <x-hugeicons-mail-02 class="w-6 h-6 text-brand-moonstone" />
@@ -194,9 +194,9 @@
             </p>
             <div class="flex flex-col sm:flex-row gap-4 max-w-md mx-auto">
               <input type="email" placeholder="Váš e-mail"
-                class="flex-1 px-4 py-3 rounded-xl bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-brand-moonstone">
+                class="flex-1 px-4 py-3 bg-white/10 border border-white/20 text-white placeholder-white/60 focus:outline-none focus:border-brand-moonstone">
               <button type="submit"
-                class="bg-moonstone text-white px-6 py-3 rounded-xl font-medium whitespace-nowrap">
+                class="bg-moonstone text-white px-6 py-3 font-medium whitespace-nowrap">
                 Odebírat
               </button>
             </div>

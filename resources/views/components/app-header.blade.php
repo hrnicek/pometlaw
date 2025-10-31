@@ -21,16 +21,16 @@
 
       <!-- Desktop Navigation -->
       <nav class="hidden lg:flex items-center space-x-1">
-        <a href="#kurzy" class="px-4 py-2 text-brand-text font-medium rounded-xl">
+        <a href="#kurzy" class="px-4 py-2 text-brand-text font-medium">
           Kurzy a semináře
         </a>
-        <a href="#o-nas" class="px-4 py-2 text-brand-text font-medium rounded-xl">
+        <a href="#o-nas" class="px-4 py-2 text-brand-text font-medium">
           O společnosti
         </a>
-        <a href="#reference" class="px-4 py-2 text-brand-text font-medium rounded-xl">
+        <a href="#reference" class="px-4 py-2 text-brand-text font-medium">
           Reference
         </a>
-        <a href="#kontakt" class="px-4 py-2 text-brand-text font-medium rounded-xl">
+        <a href="#kontakt" class="px-4 py-2 text-brand-text font-medium">
           Kontakt
         </a>
       </nav>
@@ -45,7 +45,7 @@
 
         <!-- Mobile menu button -->
         <button type="button"
-          class="lg:hidden inline-flex items-center justify-center p-2.5 rounded-xl text-brand-text focus:outline-none focus:ring-2 focus:ring-delft-blue"
+          class="lg:hidden inline-flex items-center justify-center p-2.5 text-brand-text focus:outline-none focus:ring-2 focus:ring-delft-blue"
           aria-controls="mobile-menu" aria-expanded="false" id="mobile-menu-button">
           <span class="sr-only">Otevřít hlavní menu</span>
           <!-- Menu icon -->
@@ -60,19 +60,19 @@
   <!-- Mobile menu -->
   <div class="lg:hidden hidden" id="mobile-menu">
     <div class="px-4 pt-2 pb-6 space-y-1 bg-white border-t border-paynes-gray/20">
-      <a href="#kurzy" class="flex items-center gap-3 px-4 py-3 text-brand-text font-medium rounded-xl">
+      <a href="#kurzy" class="flex items-center gap-3 px-4 py-3 text-brand-text font-medium">
         <x-hugeicons-course class="w-5 h-5" />
         <span>Kurzy a semináře</span>
       </a>
-      <a href="#o-nas" class="flex items-center gap-3 px-4 py-3 text-brand-text font-medium rounded-xl">
+      <a href="#o-nas" class="flex items-center gap-3 px-4 py-3 text-brand-text font-medium">
         <x-hugeicons-building-03 class="w-5 h-5" />
         <span>O společnosti</span>
       </a>
-      <a href="#reference" class="flex items-center gap-3 px-4 py-3 text-brand-text font-medium rounded-xl">
+      <a href="#reference" class="flex items-center gap-3 px-4 py-3 text-brand-text font-medium">
         <x-hugeicons-user-star-01 class="w-5 h-5" />
         <span>Reference</span>
       </a>
-      <a href="#kontakt" class="flex items-center gap-3 px-4 py-3 text-brand-text font-medium rounded-xl">
+      <a href="#kontakt" class="flex items-center gap-3 px-4 py-3 text-brand-text font-medium">
         <x-hugeicons-mail-01 class="w-5 h-5" />
         <span>Kontakt</span>
       </a>
