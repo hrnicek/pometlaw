@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@300;400;500;600;700;800;900&display=swap');
+@import 'tailwindcss';
+
+@theme {
+    /* Typography */
+    --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-serif: 'Roboto', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+    --font-slab: 'Roboto Slab', ui-serif, Georgia, serif, 'Apple Color Emoji', 'Segoe UI Emoji',
+        'Segoe UI Symbol', 'Noto Color Emoji';
+
+    /* POMETLAW Brand Colors */
+    --color-delft-blue: #2b3756;
+    --color-paynes-gray: #4A6A82;
+    --color-moonstone: #65999B;
+    --color-brand-text: #3D3D3D;
+    
+    /* Extended Gray Scale */
+    --color-gray-5: #f8f9fa;     /* Ultra light background */
+    --color-gray-10: #f1f3f4;    /* Light background */
+    --color-gray-20: #e8eaed;    /* Border light */
+    --color-gray-30: #dadce0;    /* Border medium */
+    --color-gray-50: #9aa0a6;    /* Text secondary */
+    --color-gray-75: #3d3d3d;    /* Text primary */
+    --color-gray-100: #000000;   /* Text strong */
+    
+    /* Semantic Colors */
+    --color-white: #ffffff;
+    --color-black: #000000;
+    
+    /* Brand Color Variations */
+    --color-delft-blue-50: #f0f1f4;
+    --color-delft-blue-100: #e1e4ea;
+    --color-delft-blue-200: #c3c9d5;
+    --color-delft-blue-300: #a5aec0;
+    --color-delft-blue-400: #8793ab;
+    --color-delft-blue-500: #2b3756;
+    --color-delft-blue-600: #252f4a;
+    --color-delft-blue-700: #1f273e;
+    --color-delft-blue-800: #191f32;
+    --color-delft-blue-900: #131726;
+    
+    --color-paynes-gray-50: #f2f5f6;
+    --color-paynes-gray-100: #e5ebed;
+    --color-paynes-gray-200: #cbd7db;
+    --color-paynes-gray-300: #b1c3c9;
+    --color-paynes-gray-400: #97afb7;
+    --color-paynes-gray-500: #4A6A82;
+    --color-paynes-gray-600: #425f75;
+    --color-paynes-gray-700: #3a5468;
+    --color-paynes-gray-800: #32495b;
+    --color-paynes-gray-900: #2a3e4e;
+    
+    --color-moonstone-50: #f3f7f7;
+    --color-moonstone-100: #e7efef;
+    --color-moonstone-200: #cfdfdf;
+    --color-moonstone-300: #b7cfcf;
+    --color-moonstone-400: #9fbfbf;
+    --color-moonstone-500: #65999B;
+    --color-moonstone-600: #5b8a8c;
+    --color-moonstone-700: #517b7d;
+    --color-moonstone-800: #476c6e;
+    --color-moonstone-900: #3d5d5f;
+}
+
+@source '../../vendor/laravel/framework/src/Illuminate/Pagination/resources/views/*.blade.php';
+@source '../../storage/framework/views/*.php';
+@source '../**/*.blade.php';
+@source '../**/*.js';
+
+@layer utilities {
+  /* Gray Scale Utilities */
+  .border-gray-5 { border-color: var(--color-gray-5); }
+  .border-gray-10 { border-color: var(--color-gray-10); }
+  .border-gray-20 { border-color: var(--color-gray-20); }
+  .border-gray-30 { border-color: var(--color-gray-30); }
+  .border-gray-50 { border-color: var(--color-gray-50); }
+  .border-gray-75 { border-color: var(--color-gray-75); }
+  .border-gray-100 { border-color: var(--color-gray-100); }
+
+  .bg-gray-5 { background-color: var(--color-gray-5); }
+  .bg-gray-10 { background-color: var(--color-gray-10); }
+  .bg-gray-20 { background-color: var(--color-gray-20); }
+  .bg-gray-30 { background-color: var(--color-gray-30); }
+  .bg-gray-50 { background-color: var(--color-gray-50); }
+  .bg-gray-75 { background-color: var(--color-gray-75); }
+  .bg-gray-100 { background-color: var(--color-gray-100); }
+
+  .text-gray-5 { color: var(--color-gray-5); }
+  .text-gray-10 { color: var(--color-gray-10); }
+  .text-gray-20 { color: var(--color-gray-20); }
+  .text-gray-30 { color: var(--color-gray-30); }
+  .text-gray-50 { color: var(--color-gray-50); }
+  .text-gray-75 { color: var(--color-gray-75); }
+  .text-gray-100 { color: var(--color-gray-100); }
+
+  /* Brand Color Utilities */
+  .text-brand-text { color: var(--color-brand-text); }
+  .bg-brand-text { background-color: var(--color-brand-text); }
+  .border-brand-text { border-color: var(--color-brand-text); }
+
+  /* Typography */
+  .font-slab { font-family: var(--font-slab); }
+
+  /* Brand Gradients */
+  .bg-brand-gradient {
+    @apply bg-gradient-to-r from-delft-blue via-paynes-gray to-moonstone;
+  }
+  
+  .bg-brand-gradient-subtle {
+    @apply bg-gradient-to-br from-delft-blue-50 via-paynes-gray-50 to-moonstone-50;
+  }
+  
+  .bg-brand-gradient-dark {
+    @apply bg-gradient-to-br from-delft-blue-800 via-paynes-gray-800 to-moonstone-800;
+  }
+
+  /* Layout Utilities */
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  
+  .container-padding {
+    @apply px-4 sm:px-6 lg:px-8;
+  }
+  
+  .max-container {
+    @apply max-w-7xl mx-auto;
+  }
+
+  /* Animation Utilities */
+  .animate-fade-in {
+    animation: fadeIn 0.6s ease-out;
+  }
+  
+  .animate-slide-up {
+    animation: slideUp 0.8s ease-out;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes slideUp {
+  from { 
+    opacity: 0; 
+    transform: translateY(20px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: translateY(0); 
+  }
+}
