@@ -1,0 +1,48 @@
+{
+  "mcpServers": {
+    "laravel-boost": {
+      "command": "php",
+      "args": [
+        "artisan",
+        "boost:mcp"
+      ],
+      "alwaysAllow": [
+        "list-available-config-keys",
+        "last-error",
+        "list-artisan-commands",
+        "database-schema",
+        "report-feedback",
+        "database-query",
+        "get-config",
+        "application-info",
+        "search-docs",
+        "list-available-env-vars",
+        "get-absolute-url",
+        "read-log-entries",
+        "browser-logs",
+        "tinker",
+        "list-routes",
+        "database-connections"
+      ]
+    },
+    "shadcn-vue-mcp": {
+      "command": "npx",
+      "args": [
+        "-y",
+        "@smithery/cli@latest",
+        "run",
+        "@HelloGGX/shadcn-vue-mcp",
+        "--key",
+        "8a13e059-8241-4108-94ee-54a6c3172869"
+      ],
+      "alwaysAllow": [
+        "requirement-structuring",
+        "components-filter",
+        "component-usage-doc",
+        "component-builder",
+        "component-quality-check"
+      ],
+      "disabled": true
+    }
+  }
+}
