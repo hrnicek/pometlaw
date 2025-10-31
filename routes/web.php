@@ -20,3 +20,10 @@ Route::get('event-categories/{eventCategory}', [EventCategoriesController::class
 // Public Lecturers routes
 Route::get('lecturers', [LecturersController::class, 'index'])->name('lecturers.index');
 Route::get('lecturers/{lecturer}', [LecturersController::class, 'show'])->name('lecturers.show');
+
+// Static pages
+Route::view('about', 'about')->name('about');
+Route::view('contact', 'contact')->name('contact');
+Route::view('faq', 'faq')->name('faq');
+Route::view('terms', 'terms')->name('terms');
+Route::view('privacy', 'privacy')->name('privacy');
