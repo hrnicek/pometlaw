@@ -8,7 +8,7 @@
             <h2 class="text-4xl lg:text-5xl font-bold text-delft-blue mb-6">
                 Co říkají naši klienti
             </h2>
-            <div class="w-24 h-1 bg-moonstone mx-auto mb-8 rounded-full"></div>
+            <div class="w-24 h-1 bg-moonstone mx-auto mb-8"></div>
             <p class="text-xl text-brand-text max-w-4xl mx-auto leading-relaxed">
                 Důvěra našich klientů je pro nás nejcennější. Přečtěte si, jak naše kurzy a poradenství 
                 pomohly profesionálům z celé České republiky.
@@ -92,7 +92,7 @@
             <!-- Testimonial 3 -->
             <div class="bg-white rounded-xl p-8 border border-paynes-gray/20">
                 <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 bg-paynes-gray rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div class="w-16 h-16 bg-paynes-gray flex items-center justify-center flex-shrink-0">
                         <span class="text-white font-bold text-xl">PS</span>
                     </div>
                     <div>
@@ -116,9 +116,9 @@
             </div>
 
             <!-- Testimonial 4 -->
-            <div class="bg-white rounded-xl p-8 border border-paynes-gray/20">
+            <div class="bg-white p-8 border border-paynes-gray/20">
                 <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 bg-delft-blue rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div class="w-16 h-16 bg-delft-blue flex items-center justify-center flex-shrink-0">
                         <span class="text-white font-bold text-xl">MH</span>
                     </div>
                     <div>
@@ -144,7 +144,7 @@
             <!-- Testimonial 5 -->
             <div class="bg-white rounded-xl p-8 border border-paynes-gray/20">
                 <div class="flex items-center gap-4 mb-6">
-                    <div class="w-16 h-16 bg-moonstone rounded-xl flex items-center justify-center flex-shrink-0">
+                    <div class="w-16 h-16 bg-moonstone flex items-center justify-center flex-shrink-0">
                         <span class="text-white font-bold text-xl">AV</span>
                     </div>
                     <div>
@@ -195,7 +195,7 @@
         </div>
 
         <!-- CTA Section -->
-        <div class="mt-20 text-center bg-delft-blue/5 rounded-xl p-12 border border-paynes-gray/20">
+        <div class="mt-20 text-center bg-delft-blue/5 p-12 border border-paynes-gray/20">
             <h3 class="text-3xl font-bold text-delft-blue mb-6">
                 Připojte se k našim spokojeným klientům
             </h3>

@@ -6,8 +6,8 @@
       <!-- Content Column -->
       <div class="space-y-8">
         <!-- Status Badge -->
-        <div class="inline-flex items-center px-4 py-2 bg-delft-blue/10 border border-delft-blue/20 rounded-xl">
-          <div class="w-2 h-2 bg-moonstone rounded-full mr-3"></div>
+        <div class="inline-flex items-center px-4 py-2 bg-delft-blue/10 border border-delft-blue/20">
+          <div class="w-2 h-2 bg-moonstone mr-3"></div>
           <span class="text-delft-blue font-medium text-sm">Moderní vzdělávací platforma</span>
         </div>
 
@@ -59,16 +59,16 @@
       <!-- Visual Card Column -->
       <div class="lg:order-last">
         <!-- Main Event Card -->
-        <div class="bg-white border border-paynes-gray rounded-xl p-6 space-y-6">
+        <div class="bg-white border border-paynes-gray p-6 space-y-6">
           <!-- Kategorie -->
           <div
-            class="inline-flex items-center px-3 py-1 bg-delft-blue/10 text-delft-blue text-sm font-medium rounded-xl">
+            class="inline-flex items-center px-3 py-1 bg-delft-blue/10 text-delft-blue text-sm font-medium">
             Nadcházející událost
           </div>
 
           <!-- Card Header -->
           <div class="flex items-center space-x-3">
-            <div class="w-12 h-12 bg-moonstone/20 rounded-xl flex items-center justify-center">
+            <div class="w-12 h-12 bg-moonstone/20 flex items-center justify-center">
               <x-hugeicons-calendar-03 class="w-6 h-6 text-moonstone" />
             </div>
             <div>

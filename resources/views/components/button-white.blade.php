@@ -8,11 +8,11 @@
 
 @php
     $sizeClasses = [
-        'xs' => 'py-1.5 px-3 text-xs font-medium rounded-lg gap-1.5',
-        'sm' => 'py-2 px-3 text-sm font-medium rounded-lg gap-2',
-        'md' => 'py-3 px-4 text-sm font-semibold rounded-xl gap-2',
-        'lg' => 'py-3 px-6 text-base font-semibold rounded-xl gap-2.5',
-        'xl' => 'py-4 px-8 text-lg font-bold rounded-2xl gap-3',
+        'xs' => 'py-1.5 px-3 text-xs font-medium gap-1.5',
+        'sm' => 'py-2 px-3 text-sm font-medium gap-2',
+        'md' => 'py-3 px-4 text-sm font-semibold gap-2',
+        'lg' => 'py-3 px-6 text-base font-semibold gap-2.5',
+        'xl' => 'py-4 px-8 text-lg font-bold gap-3',
     ];
 
     $baseClasses = 'inline-flex items-center justify-center text-center bg-white text-delft-blue border-2 border-paynes-gray focus:outline-none focus:ring-2 focus:ring-delft-blue focus:ring-offset-2';

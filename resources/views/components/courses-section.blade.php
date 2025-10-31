@@ -50,7 +50,7 @@
         <h3 class="text-3xl lg:text-4xl font-bold text-delft-blue mb-6">
           Nejbližší termíny
         </h3>
-        <div class="w-24 h-1 bg-moonstone mx-auto mb-8 rounded-full"></div>
+        <div class="w-24 h-1 bg-moonstone mx-auto mb-8"></div>
         <p class="text-xl text-brand-text max-w-4xl mx-auto leading-relaxed">
           Přihlaste se na naše nejbližší kurzy a rozšiřte své odborné znalosti.
         </p>
@@ -59,10 +59,10 @@
       @if ($upcomingEvents->count() > 0)
         <div class="grid grid-cols-1 lg:grid-cols-3 gap-8 lg:gap-10">
           @foreach ($upcomingEvents as $event)
-            <div class="bg-white rounded-xl border border-paynes-gray/20 p-8">
+            <div class="bg-white border border-paynes-gray/20 p-8">
               <div class="flex items-center justify-between mb-6">
                 <span
-                  class="inline-flex items-center px-4 py-2 rounded-xl text-sm font-semibold bg-delft-blue/10 text-delft-blue">
+                  class="inline-flex items-center px-4 py-2 text-sm font-semibold bg-delft-blue/10 text-delft-blue">
                   {{ $event->eventCategory->name }}
                 </span>
               </div>
@@ -125,7 +125,7 @@
         <h3 class="text-3xl lg:text-4xl font-bold text-delft-blue mb-6">
           Oblasti specializace
         </h3>
-        <div class="w-24 h-1 bg-moonstone mx-auto mb-8 rounded-full"></div>
+        <div class="w-24 h-1 bg-moonstone mx-auto mb-8"></div>
         <p class="text-xl text-brand-text max-w-4xl mx-auto leading-relaxed">
           Naše kurzy pokrývají klíčové oblasti práva a veřejné správy s důrazem na praktickou aplikaci.
         </p>
@@ -133,9 +133,9 @@
 
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 lg:gap-10">
         <!-- Category 1 -->
-        <div class="bg-white rounded-xl p-10 border border-paynes-gray/20">
+        <div class="bg-white p-10 border border-paynes-gray/20">
           <div class="text-center">
-            <div class="w-24 h-24 bg-delft-blue/10 rounded-xl flex items-center justify-center mx-auto mb-8">
+            <div class="w-24 h-24 bg-delft-blue/10 flex items-center justify-center mx-auto mb-8">
               <x-hugeicons-building-03 class="w-12 h-12 text-delft-blue" />
             </div>
             <h4 class="text-2xl font-bold text-delft-blue mb-6">Veřejné zakázky</h4>
@@ -151,9 +151,9 @@
         </div>
 
         <!-- Category 2 -->
-        <div class="bg-white rounded-xl p-10 border border-paynes-gray/20">
+        <div class="bg-white p-10 border border-paynes-gray/20">
           <div class="text-center">
-            <div class="w-24 h-24 bg-moonstone/10 rounded-xl flex items-center justify-center mx-auto mb-8">
+            <div class="w-24 h-24 bg-moonstone/10 flex items-center justify-center mx-auto mb-8">
               <x-hugeicons-user-shield-01 class="w-12 h-12 text-moonstone" />
             </div>
             <h4 class="text-2xl font-bold text-delft-blue mb-6">GDPR a ochrana údajů</h4>
@@ -169,9 +169,9 @@
         </div>
 
         <!-- Category 3 -->
-        <div class="bg-white rounded-xl p-10 border border-paynes-gray/20">
+        <div class="bg-white p-10 border border-paynes-gray/20">
           <div class="text-center">
-            <div class="w-24 h-24 bg-paynes-gray/10 rounded-xl flex items-center justify-center mx-auto mb-8">
+            <div class="w-24 h-24 bg-paynes-gray/10 flex items-center justify-center mx-auto mb-8">
               <x-hugeicons-legal-01 class="w-12 h-12 text-paynes-gray" />
             </div>
             <h4 class="text-2xl font-bold text-delft-blue mb-6">Správní právo</h4>
@@ -190,9 +190,9 @@
 
     <!-- CTA Section -->
     <div class="text-center">
-      <div class="bg-delft-blue/5 rounded-xl p-12 lg:p-16 border border-paynes-gray/20">
+      <div class="bg-delft-blue/5 p-12 lg:p-16 border border-paynes-gray/20">
         <div class="max-w-4xl mx-auto">
-          <div class="w-20 h-20 bg-delft-blue/10 rounded-xl flex items-center justify-center mx-auto mb-8">
+          <div class="w-20 h-20 bg-delft-blue/10 flex items-center justify-center mx-auto mb-8">
             <x-hugeicons-star class="w-10 h-10 text-delft-blue" />
           </div>
           <h3 class="text-3xl lg:text-4xl font-bold text-delft-blue mb-6">

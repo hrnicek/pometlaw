@@ -9,7 +9,7 @@
         Zjednodušte si práci<br>
         <span class="text-moonstone">s právními předpisy</span>
       </h2>
-      <div class="w-24 h-1 bg-moonstone mx-auto mb-8 rounded-full"></div>
+      <div class="w-24 h-1 bg-moonstone mx-auto mb-8"></div>
 
       <p class="text-xl text-brand-text max-w-4xl mx-auto leading-relaxed mb-12">
         Přidejte se k více než <strong class="text-moonstone">2500 profesionálům</strong>,
@@ -32,7 +32,7 @@
         <div class="text-3xl font-bold text-moonstone mb-2">15+</div>
         <div class="text-brand-text text-sm">Let zkušeností</div>
       </div>
-      <div class="bg-delft-blue/5 rounded-xl p-6 border border-delft-blue/20">
+      <div class="bg-delft-blue/5 p-6 border border-delft-blue/20">
         <div class="text-3xl font-bold text-moonstone mb-2">500+</div>
         <div class="text-brand-text text-sm">Spokojených firem</div>
       </div>
@@ -52,7 +52,7 @@
     </div>
 
     <!-- Why choose POMETLAW -->
-    <div class="bg-delft-blue/5 rounded-xl p-8 lg:p-12 max-w-5xl mx-auto border border-delft-blue/20">
+    <div class="bg-delft-blue/5 p-8 lg:p-12 max-w-5xl mx-auto border border-delft-blue/20">
       <h3 class="text-2xl lg:text-3xl font-bold text-delft-blue mb-8">
         Proč si vybrat právě POMETLAW?
       </h3>
@@ -60,7 +60,7 @@
       <div class="grid md:grid-cols-3 gap-8">
         <!-- Reason 1 -->
         <div class="text-center">
-          <div class="w-16 h-16 bg-moonstone rounded-xl flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-moonstone flex items-center justify-center mx-auto mb-4">
             <x-hugeicons-certificate-01 class="w-8 h-8 text-white" />
           </div>
           <h4 class="font-bold text-delft-blue text-lg mb-3">Ověřená expertíza</h4>
@@ -72,7 +72,7 @@
 
         <!-- Reason 2 -->
         <div class="text-center">
-          <div class="w-16 h-16 bg-moonstone rounded-xl flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-moonstone flex items-center justify-center mx-auto mb-4">
             <x-hugeicons-time-04 class="w-8 h-8 text-white" />
           </div>
           <h4 class="font-bold text-delft-blue text-lg mb-3">Aktuální informace</h4>
@@ -84,7 +84,7 @@
 
         <!-- Reason 3 -->
         <div class="text-center">
-          <div class="w-16 h-16 bg-moonstone rounded-xl flex items-center justify-center mx-auto mb-4">
+          <div class="w-16 h-16 bg-moonstone flex items-center justify-center mx-auto mb-4">
             <x-hugeicons-user-group class="w-8 h-8 text-white" />
           </div>
           <h4 class="font-bold text-delft-blue text-lg mb-3">Individuální přístup</h4>
@@ -98,7 +98,7 @@
 
     <!-- Guarantee -->
     <div class="mt-12 text-center">
-      <div class="inline-flex items-center gap-2 bg-moonstone/20 rounded-xl px-6 py-3 mb-6 border border-moonstone/30">
+      <div class="inline-flex items-center gap-2 bg-moonstone/20 px-6 py-3 mb-6 border border-moonstone/30">
         <x-hugeicons-star class="w-5 h-5 text-moonstone" />
         <span class="text-delft-blue font-medium">100% garance spokojenosti</span>
       </div>
