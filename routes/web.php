@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventCategoriesController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\HomeController;
@@ -20,6 +21,9 @@ Route::get('event-categories/{eventCategory}', [EventCategoriesController::class
 // Public Lecturers routes
 Route::get('lecturers', [LecturersController::class, 'index'])->name('lecturers.index');
 Route::get('lecturers/{lecturer}', [LecturersController::class, 'show'])->name('lecturers.show');
+
+// Contact form
+Route::post('contact', [ContactController::class, 'store'])->name('contact.store');
 
 // Static pages
 Route::view('about', 'about')->name('about');
