@@ -55,17 +55,16 @@ class EventFactory extends Factory
             'Olomouc - Konferenční centrum',
         ];
 
-        $datetimeFrom = $this->faker->dateTimeBetween('now', '+6 months');
-        $datetimeTo = (clone $datetimeFrom)->modify('+'.random_int(2, 6).' hours');
+        $datetimeFrom = $this->faker->dateTimeBetween('+1 day', '+6 months');
+        $datetimeTo = (clone $datetimeFrom)->modify('+' . random_int(2, 6) . ' hours');
 
         return [
             'name' => $this->faker->randomElement($eventTitles),
             'description' => $this->faker->randomElement($descriptions),
-            'event_date' => $datetimeFrom,
             'datetime_from' => $datetimeFrom,
             'datetime_to' => $datetimeTo,
             'capacity' => $this->faker->numberBetween(20, 100),
-            'price' => $this->faker->randomElement([2500, 3500, 4500, 5500, 6500, 7500]) * 100, // v haléřích
+            'price' => $this->faker->randomElement([2500, 3500, 4500, 5500, 6500, 7500]),
             'location' => $this->faker->randomElement($locations),
             'event_category_id' => EventCategory::factory(),
             'created_at' => $this->faker->dateTimeBetween('-3 months', 'now'),
@@ -78,11 +77,13 @@ class EventFactory extends Factory
      */
     public function past(): static
     {
-        return $this->state(fn (array $attributes) => [
-            'event_date' => $this->faker->dateTimeBetween('-6 months', '-1 day'),
-            'datetime_from' => $this->faker->dateTimeBetween('-6 months', '-1 day'),
-            'datetime_to' => $this->faker->dateTimeBetween('-6 months', '-1 day')->modify('+'.random_int(2, 6).' hours'),
-        ]);
+        return $this->state(function (array $attributes) {
+            $from = $this->faker->dateTimeBetween('-6 months', '-1 day');
+            return [
+                'datetime_from' => $from,
+                'datetime_to' => (clone $from)->modify('+' . random_int(2, 6) . ' hours'),
+            ];
+        });
     }
 
     /**
@@ -90,11 +91,13 @@ class EventFactory extends Factory
      */
     public function upcoming(): static
     {
-        return $this->state(fn (array $attributes) => [
-            'event_date' => $this->faker->dateTimeBetween('+1 day', '+6 months'),
-            'datetime_from' => $this->faker->dateTimeBetween('+1 day', '+6 months'),
-            'datetime_to' => $this->faker->dateTimeBetween('+1 day', '+6 months')->modify('+'.random_int(2, 6).' hours'),
-        ]);
+        return $this->state(function (array $attributes) {
+            $from = $this->faker->dateTimeBetween('+1 day', '+6 months');
+            return [
+                'datetime_from' => $from,
+                'datetime_to' => (clone $from)->modify('+' . random_int(2, 6) . ' hours'),
+            ];
+        });
     }
 
     /**
@@ -103,7 +106,7 @@ class EventFactory extends Factory
     public function expensive(): static
     {
         return $this->state(fn (array $attributes) => [
-            'price' => $this->faker->numberBetween(8000, 15000) * 100, // v haléřích
+            'price' => $this->faker->numberBetween(8000, 15000),
         ]);
     }
 

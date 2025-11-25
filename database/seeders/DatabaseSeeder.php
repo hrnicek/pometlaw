@@ -2,12 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\Event;
-use App\Models\EventCategory;
-use App\Models\Lecturer;
 use App\Models\User;
-use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use App\Models\Event;
+use App\Models\Article;
+use App\Models\Lecturer;
+use App\Models\EventCategory;
 use Illuminate\Database\Seeder;
+use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 
 class DatabaseSeeder extends Seeder
 {
@@ -18,16 +19,25 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
-
-        User::create([
+        User::firstOrCreate(
+            ['email' => 'hrncir@zondy.cz'],
+            [
             'name' => 'Jakub',
-            'email' => 'hrncir@zondy.cz',
             'password' => bcrypt('Zondy2025!'),
-        ]);
+            ]
+        );
+
+        User::firstOrCreate(
+            ['email' => 'info@pometlaw.cz'],
+            [
+            'name' => 'Admin',
+            'password' => bcrypt('Pomelo2025!'),
+            ]
+        );
 
         EventCategory::factory(10)->create();
         Lecturer::factory(3)->create();
         Event::factory(16)->create();
+        Article::factory(12)->create();
     }
 }

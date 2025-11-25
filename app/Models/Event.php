@@ -19,7 +19,6 @@ class Event extends Model
     protected $fillable = [
         'name',
         'description',
-        'event_date',
         'datetime_from',
         'datetime_to',
         'capacity',
@@ -31,7 +30,6 @@ class Event extends Model
     protected function casts(): array
     {
         return [
-            'event_date' => 'datetime',
             'datetime_from' => 'datetime',
             'datetime_to' => 'datetime',
             'capacity' => 'integer',
@@ -61,7 +59,7 @@ class Event extends Model
 
     public function scopeUpcoming(Builder $query): Builder
     {
-        return $query->where('event_date', '>', now());
+        return $query->where('datetime_from', '>', now());
     }
 
     public function scopeByCategory(Builder $query, int $categoryId): Builder
@@ -80,12 +78,12 @@ class Event extends Model
 
     public function getFormattedEventDateAttribute(): string
     {
-        return $this->event_date->format('j. n. Y');
+        return $this->datetime_from?->format('j. n. Y') ?? '';
     }
 
     public function getIsUpcomingAttribute(): bool
     {
-        return $this->event_date > now();
+        return $this->datetime_from?->isFuture() ?? false;
     }
 
     public function reservations(): BelongsToMany

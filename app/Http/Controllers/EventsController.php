@@ -30,8 +30,8 @@ class EventsController extends Controller
             $query->search(request('search'));
         }
 
-        $events = $query->orderBy('datum_konani')->paginate(12);
-        $categories = EventCategory::orderBy('nazev')->get();
+        $events = $query->orderBy('datetime_from')->paginate(12);
+        $categories = EventCategory::orderBy('name')->get();
 
         return view('events.index', compact('events', 'categories'));
     }

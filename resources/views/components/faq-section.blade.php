@@ -1,4 +1,4 @@
-<section class="py-12 lg:py-24">
+<section class="py-12 lg:py-24 bg-white">
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
       <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Často kladené dotazy</h2>

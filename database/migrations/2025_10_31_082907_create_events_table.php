@@ -16,7 +16,8 @@ return new class extends Migration
             $table->string('name');
             $table->string('slug')->nullable()->unique();
             $table->text('description');
-            $table->dateTime('event_date');
+            $table->dateTime('datetime_from');
+            $table->dateTime('datetime_to');
             $table->integer('capacity');
             $table->decimal('price', 8, 2);
             $table->string('location');

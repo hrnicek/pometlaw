@@ -12,8 +12,12 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->dateTime('datetime_from')->nullable();
-            $table->dateTime('datetime_to')->nullable();
+            if (!Schema::hasColumn('events', 'datetime_from')) {
+                $table->dateTime('datetime_from')->nullable();
+            }
+            if (!Schema::hasColumn('events', 'datetime_to')) {
+                $table->dateTime('datetime_to')->nullable();
+            }
         });
     }
 
@@ -23,7 +27,12 @@ return new class extends Migration
     public function down(): void
     {
         Schema::table('events', function (Blueprint $table) {
-            $table->dropColumn(['datetime_from', 'datetime_to']);
+            if (Schema::hasColumn('events', 'datetime_from')) {
+                $table->dropColumn('datetime_from');
+            }
+            if (Schema::hasColumn('events', 'datetime_to')) {
+                $table->dropColumn('datetime_to');
+            }
         });
     }
 };

@@ -1,32 +1,42 @@
 <?php
 
+declare(strict_types=1);
+
 namespace App\Models;
 
-use Spatie\Sluggable\HasSlug;
-use Spatie\MediaLibrary\HasMedia;
-use Spatie\Sluggable\SlugOptions;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Spatie\Sluggable\HasSlug;
+use Spatie\Sluggable\SlugOptions;
+use Spatie\MediaLibrary\HasMedia;
 use Spatie\MediaLibrary\InteractsWithMedia;
-use Spatie\MediaLibrary\MediaCollections\Models\Media;
 
 class Article extends Model implements HasMedia
 {
-    use HasSlug, InteractsWithMedia;
+    use HasFactory, HasSlug, InteractsWithMedia;
 
     protected $fillable = [
         'title',
         'slug',
-        'excerpt',
+        'perex',
         'content',
         'published_at',
-        'created_at',
-        'updated_at',
+        'is_published',
     ];
 
-        /**
-     * Get the options for generating the slug.
-     */
-    public function getSlugOptions() : SlugOptions
+    protected function casts(): array
+    {
+        return [
+            'title' => 'string',
+            'slug' => 'string',
+            'perex' => 'string',
+            'content' => 'string',
+            'published_at' => 'datetime',
+            'is_published' => 'boolean',
+        ];
+    }
+
+    public function getSlugOptions(): SlugOptions
     {
         return SlugOptions::create()
             ->generateSlugsFrom('title')
@@ -35,13 +45,8 @@ class Article extends Model implements HasMedia
 
     public function registerMediaCollections(): void
     {
-        $this->addMediaCollection('image')->singleFile();
-    }
-
-    public function registerMediaConversions(?Media $media = null): void
-    {
-        $this
-        ->addMediaConversion('preview')
-        ->nonQueued();
+        $this->addMediaCollection('image')
+            ->useFallbackUrl('/img/placeholder.jpg')
+            ->singleFile();
     }
 }
