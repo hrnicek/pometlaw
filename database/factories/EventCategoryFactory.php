@@ -45,15 +45,15 @@ class EventCategoryFactory extends Factory
             ],
         ];
 
-        $category = $this->faker->randomElement($categories);
+        $category = fake()->randomElement($categories);
 
         // Přidáme unikátní suffix pro zabránění duplicitám
-        $uniqueSuffix = $this->faker->unique()->numberBetween(1, 9999);
+        $uniqueSuffix = fake()->unique()->numberBetween(1, 9999);
 
         return [
             'name' => $category['name'].' #'.$uniqueSuffix,
             'description' => $category['description'],
-            'created_at' => $this->faker->dateTimeBetween('-1 year', 'now'),
+            'created_at' => now()->subDays(random_int(0, 365))->toDateTime(),
             'updated_at' => now(),
         ];
     }

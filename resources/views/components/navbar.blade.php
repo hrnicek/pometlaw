@@ -16,9 +16,11 @@
       </ul>
       <div class="flex items-center justify-end">
         <div class="hidden md:block">
-          <x-ui.button-outline href="{{ route('contact') }}" class="{{ $theme === 'bg-transparent' ? 'text-white border-white hover:bg-white hover:text-delft-blue' : 'text-delft-blue border-delft-blue hover:bg-delft-blue hover:text-white' }}">
+          <a href="{{ route('contact') }}">
+          <x-ui.button-outline class="hover:cursor-pointer {{ $theme === 'bg-transparent' ? 'text-white border-white hover:bg-white hover:text-delft-blue' : 'text-delft-blue border-delft-blue hover:bg-delft-blue hover:text-white' }}">
             Kontaktujte nás
           </x-ui.button-outline>
+        </a>
         </div>
         <button class="md:hidden {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }}" x-on:click="mobileNavOpen = !mobileNavOpen">
           <svg width="32" height="32" viewbox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,7 +30,7 @@
           </svg>
         </button>
       </div>
-    </div>
+    </div>nta
   </div>
 
   <!-- Mobile Menu -->
