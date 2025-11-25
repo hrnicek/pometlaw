@@ -2,9 +2,11 @@
 
 namespace App\Filament\Resources\EventCategories\Schemas;
 
+
+use Filament\Schemas\Schema;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Schema;
+use Filament\Schemas\Components\Section;
 
 class EventCategoryForm
 {
@@ -12,12 +14,16 @@ class EventCategoryForm
     {
         return $schema
             ->components([
-                TextInput::make('name')
-                    ->label('Název')
-                    ->required(),
-                Textarea::make('description')
-                    ->label('Popis')
-                    ->columnSpanFull(),
+                Section::make('Kategorie')
+                    ->schema([
+                        TextInput::make('name')
+                            ->label('Název')
+                            ->required(),
+                        Textarea::make('description')
+                            ->label('Popis')
+                            ->columnSpanFull(),
+                    ])
+                    ->columns(2),
             ]);
     }
 }

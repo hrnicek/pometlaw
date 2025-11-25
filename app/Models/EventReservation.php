@@ -48,4 +48,9 @@ class EventReservation extends Model
     {
         return $this->belongsTo(Event::class);
     }
+
+    public function getFullNameAttribute(): string
+    {
+        return trim(((string) ($this->first_name ?? '')) . ' ' . ((string) ($this->last_name ?? '')));
+    }
 }

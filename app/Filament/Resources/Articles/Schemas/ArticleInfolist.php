@@ -12,9 +12,11 @@ class ArticleInfolist
         return $schema
             ->components([
                 TextEntry::make('created_at')
+                    ->label('Vytvořeno')
                     ->dateTime()
                     ->placeholder('-'),
                 TextEntry::make('updated_at')
+                    ->label('Aktualizováno')
                     ->dateTime()
                     ->placeholder('-'),
             ]);

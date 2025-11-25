@@ -20,7 +20,15 @@ class ArticleResource extends Resource
 {
     protected static ?string $model = Article::class;
 
+    protected static ?string $modelLabel = 'Článek';
+
+    protected static ?string $pluralModelLabel = 'Články';
+
+    protected static ?string $navigationLabel = 'Články';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
+
+    protected static \UnitEnum|string|null $navigationGroup = 'Obsah';
 
     protected static ?string $recordTitleAttribute = 'title';
 

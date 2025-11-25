@@ -16,21 +16,27 @@ class EventReservationsTable
         return $table
             ->columns([
                 TextColumn::make('event.name')
+                    ->label('Událost')
                     ->searchable(),
                 TextColumn::make('first_name')
+                    ->label('Jméno')
                     ->searchable(),
                 TextColumn::make('last_name')
+                    ->label('Příjmení')
                     ->searchable(),
                 TextColumn::make('email')
-                    ->label('Email address')
+                    ->label('E-mail')
                     ->searchable(),
                 TextColumn::make('phone')
+                    ->label('Telefon')
                     ->searchable(),
                 TextColumn::make('created_at')
+                    ->label('Vytvořeno')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),
                 TextColumn::make('updated_at')
+                    ->label('Aktualizováno')
                     ->dateTime()
                     ->sortable()
                     ->toggleable(isToggledHiddenByDefault: true),

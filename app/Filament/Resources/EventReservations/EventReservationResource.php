@@ -20,9 +20,17 @@ class EventReservationResource extends Resource
 {
     protected static ?string $model = EventReservation::class;
 
+    protected static ?string $modelLabel = 'Rezervace';
+
+    protected static ?string $pluralModelLabel = 'Rezervace';
+
+    protected static ?string $navigationLabel = 'Rezervace';
+
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
-    protected static ?string $recordTitleAttribute = 'id';
+    protected static ?string $recordTitleAttribute = 'full_name';
+
+    protected static \UnitEnum|string|null $navigationGroup = 'Události';
 
     public static function form(Schema $schema): Schema
     {

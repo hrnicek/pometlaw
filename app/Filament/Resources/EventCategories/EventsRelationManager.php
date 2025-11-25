@@ -28,13 +28,14 @@ class EventsRelationManager extends RelationManager
             ->columns([
                 Tables\Columns\TextColumn::make('name')
                     ->label('Název'),
-                Tables\Columns\TextColumn::make('event_date')
-                    ->label('Datum události')
-                    ->date(),
+                Tables\Columns\TextColumn::make('datetime_from')
+                    ->label('Začátek')
+                    ->dateTime(),
                 Tables\Columns\TextColumn::make('capacity')
                     ->label('Kapacita'),
-                Tables\Columns\TextColumn::make('formatted_price')
-                    ->label('Cena'),
+                Tables\Columns\TextColumn::make('price')
+                    ->label('Cena')
+                    ->money('CZK'),
             ])
             ->filters([
                 //

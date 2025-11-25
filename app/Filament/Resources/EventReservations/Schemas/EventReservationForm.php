@@ -2,10 +2,12 @@
 
 namespace App\Filament\Resources\EventReservations\Schemas;
 
+
+use Filament\Schemas\Schema;
 use Filament\Forms\Components\Select;
 use Filament\Forms\Components\Textarea;
 use Filament\Forms\Components\TextInput;
-use Filament\Schemas\Schema;
+use Filament\Schemas\Components\Section;
 
 class EventReservationForm
 {
@@ -13,21 +15,38 @@ class EventReservationForm
     {
         return $schema
             ->components([
-                Select::make('event_id')
-                    ->relationship('event', 'name')
-                    ->required(),
-                TextInput::make('first_name')
-                    ->required(),
-                TextInput::make('last_name')
-                    ->required(),
-                TextInput::make('email')
-                    ->label('Email address')
-                    ->email()
-                    ->required(),
-                TextInput::make('phone')
-                    ->tel(),
-                Textarea::make('note')
-                    ->columnSpanFull(),
+                Section::make('Událost')
+                    ->schema([
+                        Select::make('event_id')
+                            ->label('Událost')
+                            ->searchable()
+                            ->preload()
+                            ->relationship('event', 'name')
+                            ->required(),
+                    ]),
+                Section::make('Kontaktní údaje')
+                    ->schema([
+                        TextInput::make('first_name')
+                            ->label('Jméno')
+                            ->required(),
+                        TextInput::make('last_name')
+                            ->label('Příjmení')
+                            ->required(),
+                        TextInput::make('email')
+                            ->label('E‑mail')
+                            ->email()
+                            ->required(),
+                        TextInput::make('phone')
+                            ->label('Telefon')
+                            ->tel(),
+                    ])
+                    ->columns(2),
+                Section::make('Poznámka')
+                    ->schema([
+                        Textarea::make('note')
+                            ->label('Poznámka')
+                            ->columnSpanFull(),
+                    ]),
             ]);
     }
 }

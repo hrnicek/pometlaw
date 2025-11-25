@@ -1,8 +1,15 @@
 import './bootstrap';
 
+// Cookie consent
+// import './cookieconsent';
+
+
+
 import Alpine from "alpinejs";
 import anchor from "@alpinejs/anchor";
 import collapse from "@alpinejs/collapse";
+
+
 
 // Custom Alpine.js directives and utilities
 Alpine.plugin(anchor);

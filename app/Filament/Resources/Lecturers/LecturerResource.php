@@ -26,6 +26,10 @@ class LecturerResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $recordTitleAttribute = 'full_name';
+
+    protected static \UnitEnum|string|null $navigationGroup = 'Události';
+
     public static function form(Schema $schema): Schema
     {
         return LecturerForm::configure($schema);

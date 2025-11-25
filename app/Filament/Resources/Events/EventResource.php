@@ -28,6 +28,10 @@ class EventResource extends Resource
 
     protected static string|BackedEnum|null $navigationIcon = Heroicon::OutlinedRectangleStack;
 
+    protected static ?string $recordTitleAttribute = 'name';
+
+    protected static \UnitEnum|string|null $navigationGroup = 'Události';
+
     public static function getEagerLoading(): array
     {
         return ['eventCategory', 'lecturers'];
