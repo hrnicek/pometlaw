@@ -2,13 +2,13 @@
 
 namespace Database\Seeders;
 
-use App\Models\User;
-use App\Models\Event;
 use App\Models\Article;
-use App\Models\Lecturer;
+use App\Models\Event;
 use App\Models\EventCategory;
-use Illuminate\Database\Seeder;
+use App\Models\Lecturer;
+use App\Models\User;
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
+use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
 {
@@ -22,16 +22,16 @@ class DatabaseSeeder extends Seeder
         User::firstOrCreate(
             ['email' => 'hrncir@zondy.cz'],
             [
-            'name' => 'Jakub',
-            'password' => bcrypt('Zondy2025!'),
+                'name' => 'Jakub',
+                'password' => bcrypt('Zondy2025!'),
             ]
         );
 
         User::firstOrCreate(
             ['email' => 'info@pometlaw.cz'],
             [
-            'name' => 'Admin',
-            'password' => bcrypt('Pomelo2025!'),
+                'name' => 'Admin',
+                'password' => bcrypt('Pomelo2025!'),
             ]
         );
 

@@ -12,10 +12,10 @@ return new class extends Migration
     public function up(): void
     {
         Schema::table('events', function (Blueprint $table) {
-            if (!Schema::hasColumn('events', 'datetime_from')) {
+            if (! Schema::hasColumn('events', 'datetime_from')) {
                 $table->dateTime('datetime_from')->nullable();
             }
-            if (!Schema::hasColumn('events', 'datetime_to')) {
+            if (! Schema::hasColumn('events', 'datetime_to')) {
                 $table->dateTime('datetime_to')->nullable();
             }
         });

@@ -8,6 +8,8 @@ class ContactController extends Controller
 {
     public function store(Request $request)
     {
+        seo()->title('Kontaktujte nás');
+
         $validated = $request->validate([
             'first_name' => 'required|string|max:255',
             'last_name' => 'required|string|max:255',

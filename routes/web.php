@@ -1,9 +1,9 @@
 <?php
 
+use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventCategoriesController;
 use App\Http\Controllers\EventReservationController;
-use App\Http\Controllers\ArticlesController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LecturersController;

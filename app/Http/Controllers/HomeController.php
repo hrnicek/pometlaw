@@ -4,14 +4,16 @@ declare(strict_types=1);
 
 namespace App\Http\Controllers;
 
-use App\Models\Event;
 use App\Models\Article;
+use App\Models\Event;
 use Illuminate\View\View;
 
 class HomeController extends Controller
 {
     public function index(): View
     {
+        seo()->title('Vymetáme staré postupy a byrokratické zvyklosti');
+
         $upcomingEvents = Event::with(['eventCategory', 'lecturers'])
             ->upcoming()
             ->latest('datetime_from')

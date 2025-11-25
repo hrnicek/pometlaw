@@ -56,7 +56,7 @@ class EventFactory extends Factory
         ];
 
         $datetimeFrom = $this->faker->dateTimeBetween('+1 day', '+6 months');
-        $datetimeTo = (clone $datetimeFrom)->modify('+' . random_int(2, 6) . ' hours');
+        $datetimeTo = (clone $datetimeFrom)->modify('+'.random_int(2, 6).' hours');
 
         return [
             'name' => $this->faker->randomElement($eventTitles),
@@ -79,9 +79,10 @@ class EventFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             $from = $this->faker->dateTimeBetween('-6 months', '-1 day');
+
             return [
                 'datetime_from' => $from,
-                'datetime_to' => (clone $from)->modify('+' . random_int(2, 6) . ' hours'),
+                'datetime_to' => (clone $from)->modify('+'.random_int(2, 6).' hours'),
             ];
         });
     }
@@ -93,9 +94,10 @@ class EventFactory extends Factory
     {
         return $this->state(function (array $attributes) {
             $from = $this->faker->dateTimeBetween('+1 day', '+6 months');
+
             return [
                 'datetime_from' => $from,
-                'datetime_to' => (clone $from)->modify('+' . random_int(2, 6) . ' hours'),
+                'datetime_to' => (clone $from)->modify('+'.random_int(2, 6).' hours'),
             ];
         });
     }
