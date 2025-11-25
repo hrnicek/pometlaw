@@ -4,7 +4,7 @@
             <!-- Company Info -->
             <div class="md:col-span-2">
                 <div class="flex items-center space-x-3 mb-4">
-                    <img src="{{ asset('img/logo/Vertikální logo/Primární logo : Barevné/vertical_pometlaw_primarniBarevne_textBila.png') }}" alt="Pometlaw" class="h-12 w-auto">
+                    <img src="{{ asset('img/logo.svg') }}" alt="Pometlaw" class="h-20 w-auto">
                 </div>
                 <p class="text-gray-900 mb-6 max-w-md">
                     Inovativní přístup k modernizaci veřejných zakázek a administrativních procesů.

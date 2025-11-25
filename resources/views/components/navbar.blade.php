@@ -1,6 +1,6 @@
 @props(['theme' => 'bg-white', 'mode' => 'dark'])
 
-<nav class="{{ $theme }} py-6 relative z-50" x-data="{ mobileNavOpen: false }">
+<nav class="{{ $theme }} py-4 relative z-50" x-data="{ mobileNavOpen: false }">
   <div class="container mx-auto px-4">
     <div class="relative flex items-center justify-between">
       <a class="inline-block" href="{{ route('home') }}">

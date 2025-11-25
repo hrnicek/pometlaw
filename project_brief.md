@@ -1,3 +1,11 @@
+#Company Info
+NÁZEV:	pometlaw s.r.o.	pometlaw s.r.o. - logo	
+pometlaw s.r.o. - náhled vizuálního zobrazení vztahů obchodního rejstříku
+IČO:	21333092
+Z. KAPITÁL:	30 000 Kč
+SCHRÁNKA: 	2nzw4yj
+ADRESA:	Moravské náměstí 127/3, Brno-město, 602 00 Brno
+
 Project Brief: Pometlaw
 1. O společnosti (Who we are)
 Pometlaw (foneticky [pometlo]) je vzdělávací a poradenská společnost specializující se na oblast veřejných zakázek. Náš název v sobě spojuje český nástroj pro úklid („pometlo“) a anglický výraz pro právo („law“).
