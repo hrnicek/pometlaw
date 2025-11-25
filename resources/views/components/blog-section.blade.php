@@ -32,9 +32,9 @@
                             @if($article->hasMedia('image'))
                                 <img src="{{ $article->getFirstMediaUrl('image') }}" 
                                      alt="{{ $article->title }}" 
-                                     class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out">
+                                     class="w-full h-full object-cover">
                             @else
-                                <div class="w-full h-full bg-gray-5 flex items-center justify-center transform group-hover:scale-105 transition-transform duration-500">
+                                <div class="w-full h-full bg-gray-5 flex items-center justify-center">
                                     <svg class="w-12 h-12 text-gray-20" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="1" d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
                                     </svg>
@@ -64,7 +64,7 @@
                             <div class="mt-auto">
                                 <a href="{{ route('articles.show', $article) }}" class="inline-flex items-center text-sm font-bold text-delft-blue group-hover:text-moonstone transition-colors">
                                     Číst článek
-                                    <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                    <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                         <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                     </svg>
                                 </a>
@@ -76,7 +76,7 @@
                 <article class="group flex flex-col h-full bg-transparent">
                     <a href="#" class="block overflow-hidden rounded-2xl mb-6 relative aspect-[3/2]">
                         <div class="absolute inset-0 bg-delft-blue/0 group-hover:bg-delft-blue/10 transition-colors duration-300 z-10"></div>
-                        <img src="https://cdn.flyonui.com/fy-assets/blocks/marketing-ui/blog/blog-36.png" alt="Nemovitosti" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out">
+                        <img src="https://cdn.flyonui.com/fy-assets/blocks/marketing-ui/blog/blog-36.png" alt="Nemovitosti" class="w-full h-full object-cover">
                     </a>
                     <div class="flex flex-col flex-grow">
                         <div class="flex items-center text-xs font-medium text-moonstone uppercase tracking-wider mb-3">
@@ -91,7 +91,7 @@
                         <div class="mt-auto">
                             <a href="#" class="inline-flex items-center text-sm font-bold text-delft-blue group-hover:text-moonstone transition-colors">
                                 Číst článek
-                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </a>
@@ -102,7 +102,7 @@
                 <article class="group flex flex-col h-full bg-transparent">
                     <a href="#" class="block overflow-hidden rounded-2xl mb-6 relative aspect-[3/2]">
                         <div class="absolute inset-0 bg-delft-blue/0 group-hover:bg-delft-blue/10 transition-colors duration-300 z-10"></div>
-                        <img src="https://cdn.flyonui.com/fy-assets/blocks/marketing-ui/blog/blog-37.png" alt="Územní plán" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out">
+                        <img src="https://cdn.flyonui.com/fy-assets/blocks/marketing-ui/blog/blog-37.png" alt="Územní plán" class="w-full h-full object-cover">
                     </a>
                     <div class="flex flex-col flex-grow">
                         <div class="flex items-center text-xs font-medium text-moonstone uppercase tracking-wider mb-3">
@@ -117,7 +117,7 @@
                         <div class="mt-auto">
                             <a href="#" class="inline-flex items-center text-sm font-bold text-delft-blue group-hover:text-moonstone transition-colors">
                                 Číst článek
-                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </a>
@@ -128,7 +128,7 @@
                 <article class="group flex flex-col h-full bg-transparent">
                     <a href="#" class="block overflow-hidden rounded-2xl mb-6 relative aspect-[3/2]">
                         <div class="absolute inset-0 bg-delft-blue/0 group-hover:bg-delft-blue/10 transition-colors duration-300 z-10"></div>
-                        <img src="https://cdn.flyonui.com/fy-assets/blocks/marketing-ui/blog/blog-38.png" alt="Smlouva" class="w-full h-full object-cover transform group-hover:scale-105 transition-transform duration-500 ease-out">
+                        <img src="https://cdn.flyonui.com/fy-assets/blocks/marketing-ui/blog/blog-38.png" alt="Smlouva" class="w-full h-full object-cover">
                     </a>
                     <div class="flex flex-col flex-grow">
                         <div class="flex items-center text-xs font-medium text-moonstone uppercase tracking-wider mb-3">
@@ -143,7 +143,7 @@
                         <div class="mt-auto">
                             <a href="#" class="inline-flex items-center text-sm font-bold text-delft-blue group-hover:text-moonstone transition-colors">
                                 Číst článek
-                                <svg class="w-4 h-4 ml-2 transform group-hover:translate-x-1 transition-transform duration-200" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="w-4 h-4 ml-2" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3" />
                                 </svg>
                             </a>

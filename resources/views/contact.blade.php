@@ -129,7 +129,7 @@
                             </div>
 
                             <button type="submit" 
-                                    class="w-full sm:w-auto px-10 py-4 bg-delft-blue hover:bg-paynes-gray text-white font-medium rounded-xl transition-all duration-200 shadow-lg shadow-delft-blue/20 transform hover:-translate-y-1 flex items-center justify-center">
+                                    class="w-full sm:w-auto px-10 py-4 bg-delft-blue hover:bg-paynes-gray text-white font-medium rounded-xl transition-all duration-200 shadow-lg shadow-delft-blue/20 flex items-center justify-center">
                                 Odeslat zprávu
                                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>

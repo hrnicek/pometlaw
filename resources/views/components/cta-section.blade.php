@@ -24,7 +24,7 @@
 
                     <div class="flex flex-col sm:flex-row gap-4">
                         <a href="#sluzby" 
-                           class="inline-flex justify-center items-center px-8 py-4 bg-moonstone hover:bg-white hover:text-delft-blue text-white rounded-xl font-medium transition-all duration-200 shadow-lg shadow-moonstone/20 transform hover:-translate-y-1">
+                           class="inline-flex justify-center items-center px-8 py-4 bg-moonstone hover:bg-white hover:text-delft-blue text-white rounded-xl font-medium transition-all duration-200 shadow-lg shadow-moonstone/20">
                             Naše služby
                         </a>
                         

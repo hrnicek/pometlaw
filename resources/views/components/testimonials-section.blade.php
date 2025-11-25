@@ -74,7 +74,7 @@
                         <div class="mt-12 flex items-center">
                             <button class="flex items-center justify-center w-12 h-12 rounded-full border border-gray-30 text-delft-blue hover:bg-delft-blue hover:text-white transition-all duration-200 mr-4 group" 
                                     x-on:click="activeSlide = activeSlide > 1 ? activeSlide - 1 : slideCount">
-                                <svg class="w-5 h-5 transform group-hover:-translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7"/>
                                 </svg>
                             </button>
@@ -88,7 +88,7 @@
 
                             <button class="flex items-center justify-center w-12 h-12 rounded-full border border-gray-30 text-delft-blue hover:bg-delft-blue hover:text-white transition-all duration-200 ml-auto md:ml-0 group" 
                                     x-on:click="activeSlide = activeSlide < slideCount ? activeSlide + 1 : 1">
-                                <svg class="w-5 h-5 transform group-hover:translate-x-0.5 transition-transform" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <svg class="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
                                 </svg>
                             </button>
