@@ -18,6 +18,8 @@ class EventsController extends Controller
      */
     public function index(): View
     {
+        seo()->title('Školení a události');
+
         $query = Event::with(['eventCategory', 'lecturers'])->upcoming();
 
         // Filtrování podle kategorie
@@ -41,6 +43,8 @@ class EventsController extends Controller
      */
     public function show(Event $event): View
     {
+        seo()->title($event->name);
+        
         $event->load(['eventCategory', 'lecturers']);
 
         return view('events.show', compact('event'));

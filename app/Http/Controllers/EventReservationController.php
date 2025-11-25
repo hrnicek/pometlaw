@@ -14,6 +14,8 @@ class EventReservationController extends Controller
 {
     public function create(Event $event): View
     {
+        seo()->title('Vytvoření rezervace na událost');
+        
         return view('events.reservation', compact('event'));
     }
 

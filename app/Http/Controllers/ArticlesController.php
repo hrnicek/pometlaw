@@ -11,6 +11,8 @@ class ArticlesController extends Controller
 {
     public function index(): View
     {
+        seo()->title('Články');
+        
         $articles = Article::query()
             ->orderByDesc('published_at')
             ->orderByDesc('created_at')
@@ -21,6 +23,9 @@ class ArticlesController extends Controller
 
     public function show(Article $article): View
     {
+        seo()->title($article->title)
+        ->description($article->perex);
+        
         return view('articles.show', compact('article'));
     }
 }
