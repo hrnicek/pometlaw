@@ -8,8 +8,8 @@ return [
 
     'generators' => [
         Generators\MetaGenerator::class => [
-            'title' => 'POMETLAW',
-            'titleTemplate' => '{title} - '.'POMETLAW',
+            'title' => 'Pometlaw',
+            'titleTemplate' => '{title} - '.'Pometlaw',
             'description' => '',
             'keywords' => [],
             'canonicalEnabled' => true,

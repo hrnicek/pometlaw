@@ -75,17 +75,14 @@
                                 </div>
 
                                 <div class="pt-4">
-                                    <form action="{{ route('events.register', $event) }}" method="POST">
-                                        @csrf
-                                        <button type="submit" class="w-full bg-zinc-900 hover:bg-zinc-800 text-white font-medium py-3 px-4 rounded-xl transition-colors duration-200 flex items-center justify-center gap-2">
-                                            <span>Registrovat na akci</span>
-                                            <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
-                                            </svg>
-                                        </button>
-                                    </form>
+                                    <a href="{{ route('events.reservations.create', $event) }}" class="w-full inline-flex items-center justify-center bg-zinc-900 hover:bg-zinc-800 text-white font-medium py-3 px-4 rounded-xl transition-colors duration-200 gap-2">
+                                        <span>Registrovat na akci</span>
+                                        <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+                                        </svg>
+                                    </a>
                                     <p class="text-xs text-center text-zinc-400 mt-3">
-                                        Registrace je nezávazná do potvrzení platby.
+                                        Rezervace je nezávazná do potvrzení platby.
                                     </p>
                                 </div>
                             </div>

@@ -21,7 +21,7 @@
           Zbavujeme vás práce, kterou po vás zákon nechce. Vymetáme staré postupy a byrokratické zvyklosti, které celý proces jen brzdí.
         </p>
         <div class="flex flex-col sm:flex-row items-start gap-4">
-          <a href="{{ route('events.index') }}" class="inline-flex items-center px-8 py-4 bg-moonstone text-delft-blue font-medium rounded-xl hover:bg-white transition-colors">
+          <a href="{{ route('events.index') }}" class="inline-flex items-center px-8 py-4 bg-moonstone hover:text-delft-blue text-white font-medium rounded-xl hover:bg-white transition-colors">
             Prohlédnout školení
           </a>
           <a href="{{ route('contact') }}" class="inline-flex items-center text-white hover:text-moonstone font-medium px-6 py-3 transition-colors">

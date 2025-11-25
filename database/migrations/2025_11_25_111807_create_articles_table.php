@@ -11,8 +11,14 @@ return new class extends Migration
      */
     public function up(): void
     {
-        Schema::create('event_reservations', function (Blueprint $table) {
+        Schema::create('articles', function (Blueprint $table) {
             $table->id();
+            $table->string('title');
+            $table->string('slug')->unique()->nullable();
+            $table->text('perex')->nullable();
+            $table->longText('content')->nullable();
+            $table->datetime('published_at')->nullable();
+            $table->boolean('is_published')->default(false);
             $table->timestamps();
         });
     }
@@ -22,6 +28,6 @@ return new class extends Migration
      */
     public function down(): void
     {
-        Schema::dropIfExists('event_reservations');
+        Schema::dropIfExists('articles');
     }
 };

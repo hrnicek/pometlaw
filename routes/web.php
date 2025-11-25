@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\EventCategoriesController;
+use App\Http\Controllers\EventReservationController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\HomeController;
 use App\Http\Controllers\LecturersController;
@@ -13,6 +14,11 @@ Route::get('/', [HomeController::class, 'index'])->name('home');
 Route::get('events', [EventsController::class, 'index'])->name('events.index');
 Route::get('events/{event}', [EventsController::class, 'show'])->name('events.show');
 Route::post('events/{event}/register', [EventsController::class, 'register'])->name('events.register');
+Route::get('events/{event}/rezervace', [EventReservationController::class, 'create'])->name('events.reservations.create');
+Route::post('events/{event}/rezervace', [EventReservationController::class, 'store'])->name('events.reservations.store');
+Route::get('events/{event}/rezervace/uspech', function (\App\Models\Event $event) {
+    return view('events.reservation-success', compact('event'));
+})->name('events.reservations.success');
 
 // Public Event Categories routes
 Route::get('event-categories', [EventCategoriesController::class, 'index'])->name('event-categories.index');
