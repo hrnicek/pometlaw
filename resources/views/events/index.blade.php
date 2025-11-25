@@ -1,22 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-    <x-navbar />
+    <x-page-header 
+        title="Naše školení" 
+        description="Komplexní vzdělávací programy pro moderní veřejné zakázky. Získejte jistotu v procesech a legislativě.">
+        Vzdělávání
+    </x-page-header>
 
     <div class="bg-white min-h-screen pb-20">
-        {{-- Hero Section --}}
-        <div class="border-b border-zinc-100 bg-white pt-24 pb-16">
-            <div class="container mx-auto px-4 text-center">
-                <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900 mb-4">
-                    Naše školení
-                </h1>
-                <p class="text-lg text-zinc-500 max-w-2xl mx-auto">
-                    Komplexní vzdělávací programy pro moderní veřejné zakázky.
-                    <br class="hidden md:inline">
-                    Získejte jistotu v procesech a legislativě.
-                </p>
-            </div>
-        </div>
 
         {{-- Events Grid --}}
         <div class="container mx-auto px-4 py-12">

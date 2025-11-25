@@ -1,19 +1,13 @@
 @extends('layouts.app')
 
 @section('content')
-<x-navbar mode="dark" />
+<x-page-header title="Kontaktujte nás" description="Dejte nám čistý stůl. Odpovíme vám do 24 hodin.">
+  Kontakt
+</x-page-header>
 
-<section class="py-20 lg:py-32 bg-white">
+<section class="py-20 bg-white">
   <div class="container mx-auto px-4">
     <div class="max-w-5xl mx-auto">
-      <div class="text-center mb-20">
-        <h1 class="text-5xl md:text-7xl font-bold text-zinc-900 mb-6 tracking-tight">
-          Kontaktujte nás
-        </h1>
-        <p class="text-xl text-zinc-500 max-w-2xl mx-auto">
-          Dejte nám čistý stůl. Odpovíme vám do 24 hodin.
-        </p>
-      </div>
 
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
         <!-- Contact Info -->

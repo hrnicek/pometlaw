@@ -5,7 +5,7 @@
             {{-- Brand & Mission --}}
             <div class="lg:col-span-4 space-y-6">
                 <a href="{{ route('home') }}" class="inline-block">
-                    <img src="{{ asset('img/logo.svg') }}" alt="Pometlaw" class="h-16 w-auto">
+                    <img src="{{ asset('img/logo.svg') }}" alt="Pometlaw" class="h-8 w-auto">
                 </a>
                 <p class="text-zinc-500 leading-relaxed max-w-sm">
                     Inovativní přístup k modernizaci veřejných zakázek.
@@ -52,10 +52,6 @@
                         <div>
                             <span class="text-zinc-400">Zápis v OR:</span>
                             <span class="text-zinc-900 ml-1">C 138676/KSBR</span>
-                        </div>
-                        <div>
-                            <span class="text-zinc-400">Základní kapitál:</span>
-                            <span class="text-zinc-900 ml-1">30 000 Kč</span>
                         </div>
                     </div>
                 </div>
