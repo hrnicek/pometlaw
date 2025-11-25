@@ -1,5 +1,5 @@
 <section class="p-4 bg-white">
-    <div class="relative overflow-hidden bg-delft-blue rounded-3xl py-20 px-5 xs:px-8 xl:px-12 shadow-2xl">
+    <div class="relative overflow-hidden bg-delft-blue rounded-3xl py-20 px-5 xs:px-8 xl:px-12 shadow-xl">
         
         <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full h-full max-w-4xl bg-paynes-gray/10 rounded-full blur-[100px] pointer-events-none"></div>
 

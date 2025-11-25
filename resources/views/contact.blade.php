@@ -94,32 +94,28 @@
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <div class="space-y-2">
                                     <label for="name" class="text-sm font-medium text-delft-blue ml-1">Jméno a příjmení</label>
-                                    <input type="text" id="name" name="name" required placeholder="Jan Novák"
-                                           class="w-full px-5 py-4 bg-gray-5 border-2 border-transparent rounded-xl text-gray-75 placeholder-gray-30 focus:outline-none focus:bg-white focus:border-moonstone transition-all duration-200">
+                                    <x-ui.input type="text" id="name" name="name" required placeholder="Jan Novák" />
                                 </div>
 
                                 <div class="space-y-2">
                                     <label for="phone" class="text-sm font-medium text-delft-blue ml-1">Telefon</label>
-                                    <input type="tel" id="phone" name="phone" placeholder="+420 777 000 000"
-                                           class="w-full px-5 py-4 bg-gray-5 border-2 border-transparent rounded-xl text-gray-75 placeholder-gray-30 focus:outline-none focus:bg-white focus:border-moonstone transition-all duration-200">
+                                    <x-ui.input type="tel" id="phone" name="phone" placeholder="+420 777 000 000" />
                                 </div>
                             </div>
 
                             <div class="space-y-2">
                                 <label for="email" class="text-sm font-medium text-delft-blue ml-1">E-mailová adresa <span class="text-moonstone">*</span></label>
-                                <input type="email" id="email" name="email" required placeholder="jan.novak@urad.cz"
-                                       class="w-full px-5 py-4 bg-gray-5 border-2 border-transparent rounded-xl text-gray-75 placeholder-gray-30 focus:outline-none focus:bg-white focus:border-moonstone transition-all duration-200">
+                                <x-ui.input type="email" id="email" name="email" required placeholder="jan.novak@urad.cz" />
                             </div>
 
                             <div class="space-y-2">
                                 <label for="message" class="text-sm font-medium text-delft-blue ml-1">S čím potřebujete pomoci?</label>
-                                <textarea id="message" name="message" rows="5" required placeholder="Popište nám stručně vaši situaci..."
-                                          class="w-full px-5 py-4 bg-gray-5 border-2 border-transparent rounded-xl text-gray-75 placeholder-gray-30 focus:outline-none focus:bg-white focus:border-moonstone transition-all duration-200 resize-none"></textarea>
+                                <x-ui.textarea id="message" name="message" rows="5" required placeholder="Popište nám stručně vaši situaci..." />
                             </div>
 
                             <div class="flex items-start gap-3 py-2">
                                 <div class="flex h-6 items-center">
-                                    <input id="gdpr" name="gdpr" type="checkbox" required class="h-5 w-5 rounded border-gray-30 text-delft-blue focus:ring-moonstone">
+                                    <x-ui.checkbox id="gdpr" name="gdpr" required />
                                 </div>
                                 <div class="text-sm leading-6">
                                     <label for="gdpr" class="text-gray-50">
@@ -128,13 +124,12 @@
                                 </div>
                             </div>
 
-                            <button type="submit" 
-                                    class="w-full sm:w-auto px-10 py-4 bg-delft-blue hover:bg-paynes-gray text-white font-medium rounded-xl transition-all duration-200 shadow-lg shadow-delft-blue/20 flex items-center justify-center">
+                            <x-ui.button-primary type="submit" class="w-full sm:w-auto px-10 py-4 shadow-lg shadow-delft-blue/20">
                                 Odeslat zprávu
                                 <svg class="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                                     <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M14 5l7 7m0 0l-7 7m7-7H3"></path>
                                 </svg>
-                            </button>
+                            </x-ui.button-primary>
                         </form>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 <section class="p-4 bg-white">
-    <div class="py-12 lg:py-24 bg-gray-5 rounded-3xl overflow-hidden relative" x-data="{ activeSlide: 1, slideCount: 3 }">
+    <div class="py-20 lg:py-24 bg-gray-5 rounded-3xl overflow-hidden relative" x-data="{ activeSlide: 1, slideCount: 3 }">
         
         <div class="absolute top-0 right-0 w-64 h-64 bg-moonstone/5 rounded-full blur-3xl pointer-events-none -mr-16 -mt-16"></div>
 

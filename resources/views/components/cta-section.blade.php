@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="w-full lg:w-1/2 relative">
-                    <div class="relative bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-2xl">
+                    <div class="relative bg-white/5 border border-white/10 backdrop-blur-sm rounded-2xl p-8 shadow-xl">
                         <div class="flex items-center justify-between mb-8 border-b border-white/10 pb-6">
                             <div class="flex gap-2">
                                 <div class="w-3 h-3 rounded-full bg-red-400/80"></div>

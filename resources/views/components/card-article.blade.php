@@ -1,7 +1,7 @@
 @props(['title', 'excerpt' => null, 'href' => '#', 'image' => null, 'date' => null])
 
 <article class="group flex flex-col h-full bg-transparent">
-  <a href="{{ $href }}" class="block overflow-hidden rounded-2xl mb-6 relative aspect-[3/2]">
+  <a href="{{ $href }}" class="block overflow-hidden rounded-2xl mb-6 relative aspect-[3/2] shadow-sm group-hover:shadow-md transition-all duration-300">
     <div class="absolute inset-0 bg-delft-blue/0 group-hover:bg-delft-blue/10 transition-colors duration-300 z-10"></div>
 
     @if($image)
