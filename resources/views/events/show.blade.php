@@ -1,65 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
-    <x-navbar />
+    <x-page-header 
+        :title="$event->name" 
+        :description="($event->formatted_event_date)
+            .($event->datetime_from ? ' • '. $event->datetime_from->format('H:i') : '')
+            .($event->datetime_to ? '–'. $event->datetime_to->format('H:i') : '')
+            .($event->location ? ' • '. $event->location : '')">
+        {{ $event->eventCategory->name ?? 'Školení' }}
+    </x-page-header>
 
     <div class="bg-white min-h-screen pb-20">
-        {{-- Hero / Header Section --}}
-        <div class="border-b border-zinc-100 bg-white pt-24 pb-12">
-            <div class="container mx-auto px-4 max-w-5xl">
-                <div class="flex flex-col gap-4">
-                    {{-- Category Badge --}}
-                    @if($event->eventCategory)
-                        <div>
-                            <span class="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-zinc-100 text-zinc-800">
-                                {{ $event->eventCategory->name }}
-                            </span>
-                        </div>
-                    @endif
-
-                    {{-- Title --}}
-                    <h1 class="text-4xl md:text-5xl font-bold tracking-tight text-zinc-900">
-                        {{ $event->name }}
-                    </h1>
-
-                    {{-- Meta Data Row --}}
-                    <div class="flex flex-wrap items-center gap-6 text-sm text-zinc-500 mt-2">
-                        @if($event->datetime_from)
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path>
-                                </svg>
-                                <span>
-                                    {{ $event->datetime_from->format('j. n. Y') }}
-                                    @if($event->datetime_to)
-                                        - {{ $event->datetime_to->format('j. n. Y') }}
-                                    @endif
-                                </span>
-                            </div>
-                            <div class="flex items-center gap-2">
-                                <svg class="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"></path>
-                                </svg>
-                                <span>
-                                    {{ $event->datetime_from->format('H:i') }}
-                                    @if($event->datetime_to)
-                                        - {{ $event->datetime_to->format('H:i') }}
-                                    @endif
-                                </span>
-                            </div>
-                        @endif
-
-                        <div class="flex items-center gap-2">
-                            <svg class="w-5 h-5 text-zinc-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"></path>
-                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"></path>
-                            </svg>
-                            <span>{{ $event->location }}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
         {{-- Main Content --}}
         <div class="container mx-auto px-4 max-w-5xl py-12">

@@ -55,12 +55,15 @@ class EventFactory extends Factory
             'Olomouc - Konferenční centrum',
         ];
 
-        $eventDate = $this->faker->dateTimeBetween('now', '+6 months');
+        $datetimeFrom = $this->faker->dateTimeBetween('now', '+6 months');
+        $datetimeTo = (clone $datetimeFrom)->modify('+'.random_int(2, 6).' hours');
 
         return [
             'name' => $this->faker->randomElement($eventTitles),
             'description' => $this->faker->randomElement($descriptions),
-            'event_date' => $eventDate,
+            'event_date' => $datetimeFrom,
+            'datetime_from' => $datetimeFrom,
+            'datetime_to' => $datetimeTo,
             'capacity' => $this->faker->numberBetween(20, 100),
             'price' => $this->faker->randomElement([2500, 3500, 4500, 5500, 6500, 7500]) * 100, // v haléřích
             'location' => $this->faker->randomElement($locations),
@@ -77,6 +80,8 @@ class EventFactory extends Factory
     {
         return $this->state(fn (array $attributes) => [
             'event_date' => $this->faker->dateTimeBetween('-6 months', '-1 day'),
+            'datetime_from' => $this->faker->dateTimeBetween('-6 months', '-1 day'),
+            'datetime_to' => $this->faker->dateTimeBetween('-6 months', '-1 day')->modify('+'.random_int(2, 6).' hours'),
         ]);
     }
 
@@ -87,6 +92,8 @@ class EventFactory extends Factory
     {
         return $this->state(fn (array $attributes) => [
             'event_date' => $this->faker->dateTimeBetween('+1 day', '+6 months'),
+            'datetime_from' => $this->faker->dateTimeBetween('+1 day', '+6 months'),
+            'datetime_to' => $this->faker->dateTimeBetween('+1 day', '+6 months')->modify('+'.random_int(2, 6).' hours'),
         ]);
     }
 

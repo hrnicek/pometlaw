@@ -7,8 +7,9 @@
         <img class="h-8 w-auto" src="{{ $mode === 'dark' ? asset('img/logo.svg') : asset('img/logo-bile.svg') }}" alt="Pometlaw Logo"/>
       </a>
       <ul class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
+        <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="{{ route('home') }}">Úvod</a></li>
         <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="{{ route('events.index') }}">Školení</a></li>
-        <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="#about">O nás</a></li>
+        <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="{{ route('about') }}">O nás</a></li>
         <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="#services">Služby</a></li>
         <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="{{ route('contact') }}">Kontakt</a></li>
       </ul>

@@ -75,4 +75,9 @@ class Event extends Model
     {
         return $this->event_date > now();
     }
+
+    public function reservations(): BelongsToMany
+    {
+        return $this->belongsToMany(EventReservation::class);
+    }
 }
