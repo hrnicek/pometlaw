@@ -39,7 +39,7 @@
     <nav class="relative flex flex-col py-7 px-10 w-full h-full bg-white overflow-y-auto">
       <div class="flex items-center justify-between">
         <a class="inline-block" href="{{ route('home') }}">
-          <img class="h-8" src="{{ asset('img/logo/Horizontální logo/Primární logo : Barevné/horizontal_pometlaw_primarniBarevne.svg') }}" alt="Pometlaw Logo"/>
+          <img class="h-8" src="{{ asset('/img/logo.svg') }}" alt="Pometlaw Logo"/>
         </a>
         <div class="flex items-center">
           <x-ui.button-outline href="{{ route('contact') }}" class="mr-6 text-delft-blue border-delft-blue hover:bg-delft-blue hover:text-white">
