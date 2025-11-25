@@ -12,7 +12,7 @@
                     <div class="w-1.5 h-1.5 rounded-full bg-moonstone animate-pulse"></div>
                 </div>
                 
-                <h2 class="font-heading text-3xl sm:text-4xl lg:text-5xl text-white mb-6">
+                <h2 class="text-white">
                     Zpřehledňujeme a <span class="text-moonstone relative inline-block">
                         zjednodušujeme
                         <svg class="absolute w-full h-2 bottom-0 left-0 text-moonstone/30" viewBox="0 0 100 10" preserveAspectRatio="none">

@@ -13,10 +13,10 @@
                         <span class="text-moonstone font-medium tracking-wide uppercase text-sm">Vzdělávání & Poradenství</span>
                     </div>
 
-                    <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl text-white leading-tight mb-6">
+                    <h2 class="text-white leading-tight mb-6">
                         Děláme ve veřejných <br class="hidden sm:block">
                         zakázkách <span class="text-moonstone">čistý stůl.</span>
-                    </h1>
+                    </h2>
 
                     <p class="text-lg text-white/80 mb-10 max-w-xl leading-relaxed">
                         Vymetáme prach ze starých postupů. Zbavujeme vás byrokracie, kterou zákon nevyžaduje, a učíme vás procesovat zakázky moderně a bez strachu.

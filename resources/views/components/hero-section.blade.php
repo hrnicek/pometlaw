@@ -13,7 +13,7 @@
 
     <div class="container mx-auto px-4 relative z-10">
       <div class="border-t border-white/25 pt-14">
-        <h1 class="font-bold text-4xl sm:text-6xl mb-8 text-white max-w-3xl">
+        <h1 class="text-white max-w-3xl">
           Děláme ve veřejných zakázkách
           <span class="text-moonstone">čistý stůl</span>
         </h1>

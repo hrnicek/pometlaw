@@ -3,10 +3,8 @@
 <section class="py-16 bg-white">
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
-      <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">
-        Naše kurzy a semináře
-      </h2>
-      <p class="text-lg text-zinc-500 max-w-2xl mx-auto">
+      <h2>Naše kurzy a semináře</h2>
+      <p class="text-lg text-gray-50 max-w-2xl mx-auto">
         Rozšiřte své znalosti v oblasti veřejných zakázek s našimi odbornými kurzy vedenými zkušenými lektory.
       </p>
     </div>

@@ -9,9 +9,7 @@
                 <div class="h-px w-8 bg-moonstone ml-4"></div>
             </div>
             
-            <h2 class="text-4xl md:text-5xl lg:text-6xl font-heading text-delft-blue mb-6">
-                Naše služby
-            </h2>
+            <h2>Naše služby</h2>
             <p class="text-xl text-gray-50 leading-relaxed">
                 Komplexní řešení pro modernizaci veřejných zakázek. <br class="hidden md:block">
                 Od vzdělávání přes poradenství až po kompletní administrativu.

@@ -12,9 +12,9 @@
 
       <div class="border-t border-white/10 pt-10 mb-16">
         <div class="flex flex-col lg:flex-row lg:items-end justify-between gap-8">
-          <h1 class="font-heading text-4xl sm:text-5xl lg:text-6xl text-white font-medium tracking-tight max-w-3xl">
+          <h2 class="text-white tracking-tight max-w-3xl">
             Pro koho <span class="text-[#65999B]">vymetáme</span> <br>byrokracii?
-          </h1>
+          </h2>
           <p class="text-lg text-white/70 max-w-xl leading-relaxed">
             Veřejné zakázky mají svá pravidla. My je známe, zjednodušujeme a předáváme dál.
           </p>

@@ -10,29 +10,20 @@
 @source '../**/*.js';
 
 @theme {
-    /* Typography */
     --font-sans: 'Roboto', ui-sans-serif, system-ui, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji',
         'Segoe UI Symbol', 'Noto Color Emoji';
-
-    /* POMETLAW Brand Colors */
     --color-delft-blue: #2b3756;
     --color-paynes-gray: #4A6A82;
     --color-moonstone: #65999B;
-
-    /* Extended Gray Scale */
-    --color-gray-5: #f8f9fa;     /* Ultra light background */
-    --color-gray-10: #f1f3f4;    /* Light background */
-    --color-gray-20: #e8eaed;    /* Border light */
-    --color-gray-30: #dadce0;    /* Border medium */
-    --color-gray-50: #9aa0a6;    /* Text secondary */
-    --color-gray-75: #3d3d3d;    /* Text primary */
-    --color-gray-100: #000000;   /* Text strong */
-
-    /* Semantic Colors */
+    --color-gray-5: #f8f9fa;
+    --color-gray-10: #f1f3f4;
+    --color-gray-20: #e8eaed;
+    --color-gray-30: #dadce0;
+    --color-gray-50: #9aa0a6;
+    --color-gray-75: #3d3d3d;
+    --color-gray-100: #000000;
     --color-white: #ffffff;
     --color-black: #000000;
-
-    /* Shadcn UI inspired design - no shadows, no hover effects */
     --shadow-none: 0 0 #0000;
     --shadow-sm: 0 0 #0000;
     --shadow: 0 0 #0000;
@@ -40,11 +31,26 @@
     --shadow-lg: 0 0 #0000;
     --shadow-xl: 0 0 #0000;
     --shadow-2xl: 0 0 #0000;
-
-    /* Border radius - clean, sharp edges */
     --radius: 0.375rem;
     --radius-sm: 0.25rem;
     --radius-md: 0.375rem;
     --radius-lg: 0.5rem;
     --radius-xl: 0.75rem;
+    --font-heading: 'Roboto', ui-sans-serif, system-ui, sans-serif;
+    --color-primary: var(--color-delft-blue);
+    --color-secondary: var(--color-paynes-gray);
+    --color-muted: var(--color-gray-50);
+    --color-accent: var(--color-moonstone);
+}
+
+.font-heading { font-family: var(--font-heading); }
+
+@layer base {
+  h1 { @apply font-heading text-gray-75 font-bold leading-tight text-4xl sm:text-5xl md:text-6xl mb-6; }
+  h2 { @apply font-heading text-gray-75 font-bold leading-tight text-3xl sm:text-4xl mb-5; }
+  h3 { @apply font-heading text-gray-75 font-semibold leading-snug text-2xl mb-4; }
+  h4 { @apply font-heading text-gray-75 font-medium leading-snug text-xl mb-3; }
+  h5 { @apply font-heading text-gray-75 font-medium leading-snug text-lg mb-2; }
+  h6 { @apply font-heading text-gray-75 font-medium leading-snug text-base mb-2; }
+  p { @apply text-gray-50 leading-relaxed text-base; }
 }

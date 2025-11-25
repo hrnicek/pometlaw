@@ -11,7 +11,7 @@
                 <span class="text-paynes-gray text-xs font-bold tracking-widest uppercase">Pometlaw Blog</span>
             </div>
             
-            <h2 class="text-4xl sm:text-5xl font-heading font-medium text-delft-blue mb-6 leading-tight">
+            <h2>
                 Aktuality z <br>
                 <span class="text-moonstone">právního světa</span>
             </h2>

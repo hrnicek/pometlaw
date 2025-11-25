@@ -1,8 +1,8 @@
 <section class="py-12 lg:py-24 bg-white">
   <div class="container mx-auto px-4">
     <div class="text-center mb-16">
-      <h2 class="text-3xl md:text-4xl font-bold text-zinc-900 mb-4">Často kladené dotazy</h2>
-      <p class="text-lg text-zinc-500 max-w-2xl mx-auto">Odpovědi na nejčastější otázky ohledně našich školení a služeb.</p>
+      <h2>Často kladené dotazy</h2>
+      <p class="text-lg text-gray-50 max-w-2xl mx-auto">Odpovědi na nejčastější otázky ohledně našich školení a služeb.</p>
     </div>
     <div class="max-w-3xl mx-auto" x-data="{ active: null }">
       <div class="space-y-4">
@@ -74,7 +74,7 @@
       <div class="mt-16 text-center">
         <h3 class="text-xl font-semibold text-zinc-900 mb-2">Nenašli jste odpověď?</h3>
         <p class="text-zinc-500 mb-6">Rádi vám poradíme osobně. Napište nám nebo zavolejte.</p>
-        <a href="{{ route('contact') }}" class="inline-flex items-center px-6 py-3 bg-white border border-zinc-200 text-zinc-900 font-medium rounded-xl hover:bg-zinc-50 hover:border-zinc-300 transition-colors">Kontaktovat podporu</a>
+        <a href="{{ route('contact') }}" class="inline-flex items-center px-6 py-3 bg-white border border-zinc-200 text-zinc-900 font-medium rounded-xl hover:bg-zinc-50 hover:border-zinc-300 transition-colors">Kontaktujte nás</a>
       </div>
     </div>
   </div>
