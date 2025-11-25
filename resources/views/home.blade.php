@@ -1,18 +1,30 @@
 @extends('layouts.app')
 
 @section('content')
-    <x-hero-section :upcomingEvents="$upcomingEvents" />
+  <x-hero-section :nearestEvent="$nearestEvent" />
 
-    <!-- Courses Section -->
-    <x-courses-section :events="$upcomingEvents" />
+  <!-- Stats Section -->
+  <x-stats-section />
 
-    <x-blog-section />
+  <!-- Courses Section -->
+  <x-courses-section :events="$upcomingEvents" />
 
-    <x-about-section />
+  <!-- Solutions Section -->
+  <x-solutions-section />
 
-    <x-services-section />
+  <!-- FAQ Section -->
+  <x-faq-section />
 
-    <x-cta-section />
+  <!-- Testimonials Section -->
+  <x-testimonials-section />
 
-    <x-next-event-highlight :nearestEvent="$nearestEvent" />
+  <!-- CTA Section -->
+  <x-cta-section />
+
+
+  <x-blog-section />
+
+  <x-about-section />
+
+  <x-services-section />
 @endsection

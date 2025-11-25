@@ -27,7 +27,6 @@
 <body class="antialiased text-gray-75 bg-gray-5  min-h-screen transition-colors duration-300">
 
   <div id="app" class="flex flex-col min-h-screen">
-    <x-navbar />
     <main id="main-content" class="flex-1">
       @yield('content')
     </main>
