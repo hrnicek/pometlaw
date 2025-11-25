@@ -1,8 +1,9 @@
 <section class="p-4 bg-white">
-    <div class="relative overflow-hidden bg-delft-blue rounded-3xl pt-20 pb-24 px-5 xs:px-8 xl:px-12">
+  <div class="relative overflow-hidden bg-delft-blue rounded-3xl pt-20 pb-24 px-5 xs:px-8 xl:px-12">
         
         <div class="absolute top-0 right-0 -mr-20 -mt-20 w-96 h-96 bg-paynes-gray/30 rounded-full blur-3xl pointer-events-none"></div>
         <div class="absolute bottom-0 left-0 -ml-20 -mb-20 w-72 h-72 bg-moonstone/10 rounded-full blur-3xl pointer-events-none"></div>
+        <img src="/img/symbol/bily/symbol.svg" alt="Pometlaw symbol" class="absolute top-6 right-6 w-36 opacity-10 pointer-events-none" />
 
         <div class="container mx-auto relative z-10">
             <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-20">

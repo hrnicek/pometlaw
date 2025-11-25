@@ -1,6 +1,7 @@
 @props(['articles' => null])
 
 <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+    <img src="/img/symbol/delft-blue/symbo-delft-bluel.svg" alt="Pometlaw symbol" class="absolute right-6 top-6 w-24 opacity-10 pointer-events-none" />
     <div class="absolute top-0 right-0 w-[800px] h-[800px] bg-gray-5 rounded-full blur-3xl -translate-y-1/2 translate-x-1/2 pointer-events-none"></div>
 
     <div class="container mx-auto px-6 md:px-10 relative z-10">

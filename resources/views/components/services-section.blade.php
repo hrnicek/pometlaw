@@ -1,4 +1,5 @@
 <section class="py-20 lg:py-32 bg-white relative overflow-hidden">
+    <img src="/img/symbol/delft-blue/symbo-delft-bluel.svg" alt="Pometlaw symbol" class="absolute right-6 top-6 w-28 opacity-10 pointer-events-none" />
     
     <div class="container mx-auto px-4 relative z-10">
         

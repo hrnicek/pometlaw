@@ -45,7 +45,7 @@
           </div>
         </a>
 
-        <a href="{{ route('events.index') }}" class="group relative flex flex col h-full p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-[#2b3756] hover:border-[#65999B] transition-all duration-300 shadow-sm">
+        <a href="{{ route('events.index') }}" class="group relative flex flex-col h-full p-8 rounded-2xl border border-white/10 bg-white/[0.02] hover:bg-[#2b3756] hover:border-[#65999B] transition-all duration-300 shadow-sm">
           
           <div class="mb-8 inline-flex items-center justify-center w-14 h-14 rounded-xl bg-white/5 border border-white/5 text-white group-hover:text-[#65999B] group-hover:bg-[#65999B]/10 group-hover:border-[#65999B]/20 transition-all duration-300">
              <svg class="w-7 h-7 fill-current" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">

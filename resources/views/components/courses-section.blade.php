@@ -1,6 +1,7 @@
 @props(['events' => []])
 
-<section class="py-16 bg-white">
+<section class="py-16 bg-white relative overflow-hidden">
+  <img src="/img/symbol/delft-blue/symbo-delft-bluel.svg" alt="Pometlaw symbol" class="absolute right-6 top-6 w-24 opacity-10 pointer-events-none" />
   <div class="container mx-auto px-4">
     <div class="text-center mb-12">
       <h2>Naše kurzy a semináře</h2>

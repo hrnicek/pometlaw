@@ -8,6 +8,7 @@
         <path d="M0 300C240 200 480 400 720 300C960 200 1200 400 1440 300V600H0V300Z" fill="#ffffff"/>
       </svg>
     </div>
+    <img src="/img/symbol/bily/symbol.svg" alt="Pometlaw symbol" class="absolute right-8 bottom-6 w-48 opacity-10 pointer-events-none" />
     
     <x-navbar theme="bg-transparent" mode="light" />
 
@@ -19,8 +20,9 @@
         <span class="inline-block ml-2 text-sm font-medium text-white/80">{{ $slot }}</span>
       </div>
       <div class="border-t border-white/25 pt-10">
-        <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl mb-6 text-white max-w-3xl">
+        <h1 class="font-bold text-4xl sm:text-5xl md:text-6xl mb-6 text-white max-w-3xl relative">
           {{ $title }}
+          <img src="/img/symbol/bily/symbol.svg" alt="" class="absolute -left-10 -top-8 w-12 opacity-10 pointer-events-none" />
         </h1>
         @if($description)
           <p class="text-lg text-white/80 max-w-2xl">
