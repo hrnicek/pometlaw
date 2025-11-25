@@ -1,4 +1,4 @@
-@props(['theme' => 'bg-white', 'mode' => 'dark'])
+@props(['theme' => 'bg-white', 'mode' => 'dark', 'eventsCount' => 0])
 
 <nav class="{{ $theme }} py-4 relative z-50" x-data="{ mobileNavOpen: false }">
   <div class="container mx-auto px-4">
@@ -8,7 +8,14 @@
       </a>
       <ul class="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 hidden md:flex">
         <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="{{ route('home') }}">Úvod</a></li>
-        <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="{{ route('events.index') }}">Kurzy</a></li>
+        <li class="mr-8">
+          <a class="inline-flex items-center {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="{{ route('events.index') }}">
+            Kurzy
+            <span class="ml-2 inline-flex items-center justify-center rounded-full text-xs px-2 py-0.5 {{ $theme === 'bg-transparent' ? 'bg-white/20 text-white' : 'bg-gray-10 text-gray-75' }}">
+              {{ $eventsCount }}
+            </span>
+          </a>
+        </li>
         <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="{{ route('articles.index') }}">Aktuality</a></li>
         <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="{{ route('about') }}">O nás</a></li>
         <li class="mr-8"><a class="inline-block {{ $theme === 'bg-transparent' ? 'text-white hover:text-moonstone' : 'text-gray-75 hover:text-delft-blue' }} font-medium transition-colors" href="#services">Služby</a></li>
@@ -54,7 +61,14 @@
       </div>
       <div class="pt-20 pb-12 mb-auto">
         <ul class="flex-col">
-          <li class="mb-6"><a class="inline-block text-delft-blue hover:text-moonstone font-medium transition-colors" href="{{ route('events.index') }}">Školení</a></li>
+          <li class="mb-6">
+            <a class="inline-flex items-center text-delft-blue hover:text-moonstone font-medium transition-colors" href="{{ route('events.index') }}">
+              Školení
+              <span class="ml-2 inline-flex items-center justify-center rounded-full text-xs px-2 py-0.5 bg-gray-10 text-gray-75">
+                {{ $eventsCount }}
+              </span>
+            </a>
+          </li>
           <li class="mb-6"><a class="inline-block text-delft-blue hover:text-moonstone font-medium transition-colors" href="{{ route('articles.index') }}">Aktuality</a></li>
           <li class="mb-6"><a class="inline-block text-delft-blue hover:text-moonstone font-medium transition-colors" href="#about">O nás</a></li>
           <li class="mb-6"><a class="inline-block text-delft-blue hover:text-moonstone font-medium transition-colors" href="{{ route('contact') }}">Kontakt</a></li>
